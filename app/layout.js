@@ -13,11 +13,7 @@ export default function RootLayout({ children }) {
 		<html lang="en">
 			<body className={inter.className}>
 				<main>
-					<p>
-						Hej sad asd asd as asd asd asfsaf sdg adg adfg fds dFD
-						asd asd as as das dsad as dasd asd as as das as as das
-						asd asd as dasd asd asd asddas
-					</p>
+					<h1>Root Layout</h1>
 				</main>
 				{children}
 			</body>
