@@ -5,6 +5,7 @@ function JobApi() {
 	const [data, setData] = useState(null)
 	const [isLoading, setIsLoading] = useState(false)
 	const [error, setError] = useState(null)
+	const [number, setNumber] = useState(0)
 
 	useEffect(() => {
 		setIsLoading(true)
@@ -22,24 +23,34 @@ function JobApi() {
 			}
 		}
 		fetchData()
+		setNumber(0)
 	}, [])
 
 	if (isLoading) {
-		return <div>Vi reser norrut ...</div>
+		return <div>Vi far norrut ...</div>
 	}
 
 	if (error) {
 		return <div>Error: {error.message}</div>
 	}
 
+	function next() {
+		setNumber(+1)
+	}
+
 	return (
 		<>
 			<div>
-				<p>EXEMPEL PÅ API</p>
+				<h1>EXEMPEL PÅ API</h1>
+
+				<button onClick={next}>
+					Nästa
+				</button>
+
 				{data && (
 					<>
-						<h1>{data.hits[0].headline}</h1>
-						<p>{data.hits[0].brief}</p>
+						<h2>{data.hits[number].headline}</h2>
+						<p>{data.hits[number].brief}</p>
 					</>
 				)}
 			</div>
