@@ -34,9 +34,10 @@ function JobApi() {
 		return <div>Error: {error.message}</div>
 	}
 
-	function next() {
-		setNumber(+1)
-	}
+function next() {
+  setNumber(prevNumber => (prevNumber < 9 ? prevNumber + 1 : 0))
+}
+
 
 	return (
 		<>
@@ -50,6 +51,7 @@ function JobApi() {
 				{data && (
 					<>
 						<h2>{data.hits[number].headline}</h2>
+						<h3>{data.hits[number].employer.name}</h3>
 						<p>{data.hits[number].brief}</p>
 					</>
 				)}
