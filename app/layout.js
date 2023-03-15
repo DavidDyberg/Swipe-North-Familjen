@@ -30,6 +30,10 @@ export default function RootLayout({ children }) {
 					<Link className="links" href="/login">
 						Log in
 					</Link>
+
+					<Link className="links" href="/jobb-api">
+						Jobb api
+					</Link>
 				</main>
 				{children}
 			</body>
