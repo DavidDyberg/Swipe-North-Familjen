@@ -1,0 +1,22 @@
+.card {
+	border-color: var(--red-dark);
+	border-radius: 8px;
+	border-style: solid;
+	border-width: 4px;
+	display: flex;
+	flex-direction: column;
+	line-height: 1.5;
+	margin: 48px auto;
+	padding: 12px;
+
+	height: 667px;
+	max-width: 375px;
+}
+
+.temporary {
+text-align: center;
+}
+
+.temporary > button {
+	margin: 4px;
+}

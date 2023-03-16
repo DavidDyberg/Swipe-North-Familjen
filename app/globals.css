@@ -12,3 +12,16 @@
 	--mustard-dark: #C1A016;
 	--mustard-light: #D3B73D;
 }
+
+nav {
+	display: flex;
+	justify-content: space-around;
+}
+
+.card {
+	border-width: 4px;
+	border-color: var(--red-dark);
+	display: flex;
+	flex-direction: column;
+	max-width: 500px;
+}

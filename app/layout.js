@@ -13,8 +13,7 @@ export default function RootLayout({ children }) {
 	return (
 		<html lang="en">
 			<body className={inter.className}>
-				<main>
-					<h1>Root Layout</h1>
+				<nav>
 					<Link className="links" href="#">
 						Home
 					</Link>
@@ -30,12 +29,16 @@ export default function RootLayout({ children }) {
 					<Link className="links" href="/login">
 						Log in
 					</Link>
-
 					<Link className="links" href="/jobb-api">
 						Jobb api
 					</Link>
-				</main>
+				</nav>
+
+				<main>
+
 				{children}
+				
+				</main>
 			</body>
 		</html>
 	)
