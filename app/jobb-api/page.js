@@ -69,7 +69,7 @@ function jobPicture() {
 		<>
 			<div>
 				<div className={card.temporary}>
-					<h1>Bild till annons</h1>
+					<h1>Swipe North App</h1>
 
 					<button onClick={swipeNorth}>Swipe Upp (matcha)</button>
 					<br />
