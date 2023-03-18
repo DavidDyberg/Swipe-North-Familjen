@@ -1,27 +1,18 @@
 :root {
 	--black: #000000;
-	--white: #fff; 
+	--white: #fff;
 
 	--red-dark: #721904;
-	--red-light: #8B341F;
+	--red-light: #8b341f;
 
-	--beige-dark: #CBC497;
-	--beige-light: #A89D55;
-	
+	--beige-dark: #cbc497;
+	--beige-light: #a89d55;
 
-	--mustard-dark: #C1A016;
-	--mustard-light: #D3B73D;
+	--mustard-dark: #c1a016;
+	--mustard-light: #d3b73d;
 }
 
 nav {
 	display: flex;
 	justify-content: space-around;
-}
-
-.card {
-	border-width: 4px;
-	border-color: var(--red-dark);
-	display: flex;
-	flex-direction: column;
-	max-width: 500px;
 }

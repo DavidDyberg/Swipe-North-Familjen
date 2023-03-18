@@ -14,9 +14,13 @@
 }
 
 .temporary {
-text-align: center;
+	text-align: center;
 }
 
 .temporary > button {
 	margin: 4px;
+}
+
+.image {
+	width: 100%;
 }
