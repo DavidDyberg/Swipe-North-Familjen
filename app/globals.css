@@ -10,6 +10,12 @@
 
 	--mustard-dark: #c1a016;
 	--mustard-light: #d3b73d;
+
+	--card-width: 375px;
+}
+
+* {
+	box-sizing: border-box;
 }
 
 nav {
@@ -17,7 +23,8 @@ nav {
 	justify-content: space-around;
 }
 
-.not-found {
+.not-found,
+.loading {
 	margin: 48px auto;
 	text-align: center;
 }

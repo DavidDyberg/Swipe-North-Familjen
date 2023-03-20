@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 export default function NotFound() {
 	return (
-		<div className='notFound'>
+		<div className='not-found'>
 			<h1 className="notFoundHeader">Oj, vad pinsamt</h1>
 			<h2 className="notFoundSubHeader">Nu blev det fel</h2>
 			<button>
