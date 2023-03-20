@@ -16,3 +16,8 @@ nav {
 	display: flex;
 	justify-content: space-around;
 }
+
+.not-found {
+	margin: 48px auto;
+	text-align: center;
+}
