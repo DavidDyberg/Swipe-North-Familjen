@@ -17,8 +17,11 @@ export default function RootLayout({ children }) {
 					<Link className="links" href="#">
 						Home
 					</Link>
-					<Link className="links" href="/about">
-						About
+					<Link className="links" href="/swipe-north">
+						Jobb api
+					</Link>
+					<Link className="links" href="/skelleftea">
+						Skellefteå
 					</Link>
 					<Link className="links" href="/profile">
 						Profile
@@ -28,9 +31,6 @@ export default function RootLayout({ children }) {
 					</Link>
 					<Link className="links" href="/login">
 						Log in
-					</Link>
-					<Link className="links" href="/swipe-north">
-						Jobb api
 					</Link>
 				</nav>
 
