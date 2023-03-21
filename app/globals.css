@@ -25,6 +25,30 @@ nav {
 
 .not-found,
 .loading {
-	margin: 48px auto;
+	margin: 40vh 0 48px 0;
 	text-align: center;
+}
+
+.button {
+	background-color: var(--mustard-dark);
+	border-radius: 25px;
+	border-style: none;
+	color: var(--white);
+	cursor: pointer;
+	font-size: 16px;
+	font-weight: 700;
+	min-width: 250px;
+	text-transform: uppercase;
+	padding: 12px;
+}
+
+.button:hover {
+	background-color: var(--mustard-light);
+}
+
+.button > a,
+.button > a:visited,
+.button > a:active {
+	color: var(--white);
+	text-decoration: none;
 }

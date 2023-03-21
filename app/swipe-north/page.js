@@ -31,7 +31,7 @@ function jobPicture() {
 	}, [jobId])
 
 	if (isLoading) {
-		return <h1>Vi far norrut ...</h1>
+		return <h1 className='loading'>Vi far norrut ...</h1>
 	}
 
 	if (error) {

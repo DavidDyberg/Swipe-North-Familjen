@@ -29,7 +29,7 @@ export default function RootLayout({ children }) {
 					<Link className="links" href="/login">
 						Log in
 					</Link>
-					<Link className="links" href="/jobb-api">
+					<Link className="links" href="/swipe-north">
 						Jobb api
 					</Link>
 				</nav>
