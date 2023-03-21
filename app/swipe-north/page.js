@@ -78,7 +78,7 @@ function jobPicture() {
 				</div>
 
 				{data && (
-					<div className={card.card}>
+					<div className={`shadow ${card.card}`}>
 						
 							<h1 className={card.headline}>{data.hits[number].headline}</h1>
 					
