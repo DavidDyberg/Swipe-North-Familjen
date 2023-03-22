@@ -10,7 +10,16 @@
             justify-content: space-between;
     padding: 22px;
   }
+
+  .Ske {
+    height: 40px;
+    width: 70px;
+  }
   
+  .Logga {
+    height: 60px;
+    width: 60px;
+  }
   .hamburger {
     display: none;
   }
@@ -21,6 +30,7 @@
   
   .navbarButton {
     background-color: #000000;
+    border-radius: 8px;
     display: block;
     height: 4px;
     margin: 5px auto;
@@ -65,7 +75,7 @@
       -webkit-transition: 0.3s;
       -o-transition: 0.3s;
       transition: 0.3s;
-      top: 3.35rem;
+      top: 5rem;
       width: 100%;
     }
   

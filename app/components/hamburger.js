@@ -2,6 +2,9 @@
 import '../hamburger.css';
 import Link from 'next/link';
 import { useState } from 'react';
+import Logga from '../../public/Swipe-North-logga-svart.png'
+import Ske from '../../public/skelleftea.png'
+import Image from 'next/image'
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,7 +13,8 @@ export default function Navbar() {
   return (
     <div className='container'>
       <nav className='navbar'>
-        
+        <Image src={Ske} className="Ske"></Image>
+        <Image src={Logga} className="Logga"></Image>
         <ul
           className={
             isOpen === false
