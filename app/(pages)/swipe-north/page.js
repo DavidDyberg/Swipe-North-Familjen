@@ -31,7 +31,7 @@ function swipeNorthApp() {
 	}, [jobId])
 
 	if (isLoading) {
-		return <h1 className='loading'>Vi far norrut ...</h1>
+		return <h1 className="loading">Vi far norrut ...</h1>
 	}
 
 	if (error) {
@@ -68,7 +68,6 @@ function swipeNorthApp() {
 	return (
 		<>
 			<div className={card.container}>
-
 				<div className={card.temporary}>
 					<button onClick={swipeNorth}>Swipe Upp (matcha)</button>
 					<br />
@@ -80,12 +79,20 @@ function swipeNorthApp() {
 
 				{data && (
 					<div className={`shadow ${card.card}`}>
-						<h1 className={card.headline}>{data.hits[number].headline}</h1>
-						<h2 className={card.employer}>{data.hits[number].employer.name}</h2>
+						<h1 className={card.headline}>
+							{data.hits[number].headline}
+						</h1>
+						<h2 className={card.employer}>
+							{data.hits[number].employer.name}
+						</h2>
 						{imgArr[data.hits[number].id.match(/[0-9]/)]}
-						<div className={card.brief}>{data.hits[number].brief}</div>
+						<div className={card.brief}>
+							{data.hits[number].brief}
+						</div>
 						<Link href={data.hits[number].source_links[0].url}>
-							<button className={card.annonsKnapp}>ÖPPNA ANNONS</button>
+							<button className={card.annonsKnapp}>
+								ÖPPNA ANNONS
+							</button>
 						</Link>
 					</div>
 				)}

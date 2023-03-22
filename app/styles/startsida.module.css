@@ -1,11 +1,11 @@
 .main {
-    background-image: url(../../public/startsida-bild1.jpg);
+	background-image: url(../../public/startsida-bild1.jpg);
 	background-size: 100% 100%;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
-    flex-grow: 1;
-    background-size: cover;
-    background-position: center;
+	flex-grow: 1;
+	background-size: cover;
+	background-position: center;
 }
 
 .logga-container {
@@ -14,34 +14,31 @@
 }
 
 .arrows-symbols-container {
-    display: flex;
-    
-    height: 200px;
-    width: 200px;
+	display: flex;
+
+	height: 200px;
+	width: 200px;
 }
 
 .arrow-up-symbol {
 	color: white;
 	font-size: 40px;
-	
-    
 }
 
 .arrow-right-symbol {
-    color: white;
+	color: white;
 	font-size: 40px;
 }
 
 .arrow-down-symbol {
-    color: white;
+	color: white;
 	font-size: 40px;
 }
 
 .arrow-left-symbol {
-    color: white;
+	color: white;
 	font-size: 40px;
 }
-
 
 .swipe-north-logga {
 	width: 200px;
@@ -52,9 +49,8 @@
 	align-items: center;
 	display: flex;
 	flex-direction: column;
-    margin: 10px;
-    margin-top: 100px;
-	
+	margin: 10px;
+	margin-top: 100px;
 }
 
 .button {
@@ -70,7 +66,6 @@
 
 .icon-container {
 	text-align: center;
-	
 }
 
 .icon {
