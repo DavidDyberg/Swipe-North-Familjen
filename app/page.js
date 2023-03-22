@@ -19,9 +19,14 @@ export default function Startsida() {
 				<div className={styles['logga-container']} >
 					<Image className={styles['swipe-north-logga']} src={photo}></Image>
 				</div>
-				<p className={styles['arrow-up-symbol']}>&#8686;</p>
-				<h1 className={styles.title} >VÄLKOMMET TILL SWIPE NORTH</h1>
-				<p className={styles.text}>SWIPEA UPPÅT FÖR ATT HITTA JUST DITT DRÖMJOBB</p>
+				<div className={styles['arrows-symbols-container']}>
+					<p className={styles['arrow-up-symbol']}>&#8686;</p>
+					<p className={styles['arrow-right-symbol']}>&#8686;</p>
+					<p className={styles['arrow-down-symbol']}>&#8686;</p>
+					<p className={styles['arrow-left-symbol']}>&#8686;</p>
+				</div>
+				
+				
 
 				<div className={styles['button-container']}>
 					<button className={styles.button} >SKAPA KONTO</button>
