@@ -1,12 +1,11 @@
-.body {
-	background-image: url(../../public/startsida-bild1.jpg);
-	background-size: 100% 100%;
-	background-attachment: fixed;
-	background-repeat: no-repeat;
-}
+
 
 .main {
 	height: 100%;
+    background-image: url(../../public/startsida-bild1.jpg);
+	background-size: 100% 100%;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
 }
 
 .logga-container {
