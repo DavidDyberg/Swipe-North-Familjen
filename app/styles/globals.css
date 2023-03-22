@@ -18,10 +18,10 @@
 	box-sizing: border-box;
 }
 
-nav {
+/* nav {
 	display: flex;
 	justify-content: space-around;
-}
+} */
 
 .not-found,
 .loading {
