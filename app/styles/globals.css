@@ -21,6 +21,7 @@ html {
 body {
 	height: 100%;
 	margin: 0;
+	overflow: hidden;
 }
 
 * {
@@ -34,7 +35,7 @@ body {
 
 .not-found,
 .loading {
-	margin: 40vh 0 48px 0;
+	margin: 30vh 0 48px 0;
 	text-align: center;
 }
 
@@ -63,6 +64,11 @@ body {
 	text-decoration: none;
 }
 
+.text-page {
+	display: flex;
+	justify-content: center;
+}
+
 .text-card {
 	background-color: var(--beige-dark);
 	border-color: var(--red-dark);
@@ -71,10 +77,10 @@ body {
 	border-width: 4px;
 	display: flex;
 	flex-direction: column;
-	height: 660px;
+	height: calc(98vh - 98px);
 	justify-content: center;
-	margin: auto;
-	padding: 24px;
+	padding: 0 24px 24px 24px;
+	margin: 0 24px;
 	max-width: var(--card-width);
 }
 

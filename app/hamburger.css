@@ -8,7 +8,7 @@
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    padding: 22px;
+    padding: 12px;
   }
 
   .Ske {
@@ -50,6 +50,7 @@
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    z-index: 30;
   }
   
   .navItem {
