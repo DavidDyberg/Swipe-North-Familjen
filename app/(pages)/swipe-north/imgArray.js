@@ -1,4 +1,4 @@
-import card from '../card.module.css'
+import card from '../../styles/card.module.css'
 
 const imgArr = [
 	<img

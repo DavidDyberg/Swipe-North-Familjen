@@ -1,6 +1,7 @@
 'use client'
 import React from 'react'
 import Link from 'next/link'
+import './styles/globals.css'
 
 export default function NotFound() {
 	return (

@@ -1,6 +1,6 @@
 'use client'
 import { useState, useEffect } from 'react'
-import card from '../card.module.css'
+import card from '../../styles/card.module.css'
 import Link from 'next/link'
 import imgArr from './imgArray.js'
 
