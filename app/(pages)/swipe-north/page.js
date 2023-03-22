@@ -1,6 +1,6 @@
 'use client'
 import { useState, useEffect } from 'react'
-import card from '../card.module.css'
+import card from '../../styles/card.module.css'
 import Link from 'next/link'
 import imgArr from './imgArray.js'
 
@@ -31,7 +31,7 @@ function jobPicture() {
 	}, [jobId])
 
 	if (isLoading) {
-		return <h1>Vi far norrut ...</h1>
+		return <h1 className='loading'>Vi far norrut ...</h1>
 	}
 
 	if (error) {
@@ -69,8 +69,6 @@ function jobPicture() {
 		<>
 			<div>
 				<div className={card.temporary}>
-					<h1>Swipe North App</h1>
-
 					<button onClick={swipeNorth}>Swipe Upp (matcha)</button>
 					<br />
 					<button onClick={back}>Vänster Swipe</button>
@@ -80,13 +78,16 @@ function jobPicture() {
 				</div>
 
 				{data && (
-					<div className={card.card}>
-						<h2>{data.hits[number].headline}</h2>
-						<h3>{data.hits[number].employer.name}</h3>
+					<div className={`shadow ${card.card}`}>
+						
+							<h1 className={card.headline}>{data.hits[number].headline}</h1>
+					
+						
+						<h2 className={card.employer}>{data.hits[number].employer.name}</h2>
 						{imgArr[data.hits[number].id.match(/[0-9]/)]}
-						<p>{data.hits[number].brief}</p>
+						<div className={card.brief}>{data.hits[number].brief}</div>
 						<Link href={data.hits[number].source_links[0].url}>
-							<button>ÖPPNA ANNONS</button>
+							<button className={card.annonsKnapp}>ÖPPNA ANNONS</button>
 						</Link>
 					</div>
 				)}

@@ -1,20 +1,13 @@
-import './styles/globals.css'
+import '../styles/globals.css'
 import { Inter } from 'next/font/google'
-//import Link from 'next/link'
-
+import Navbar from '../components/hamburger'
 const inter = Inter({ subsets: ['latin'] })
 
-export const metadata = {
-	title: 'Swipe North',
-	description: 'Hitta ditt nya jobb i Skellefteå',
-}
-
 export default function RootLayout({ children }) {
-
-
 	return (
 		<html lang="en">
 			<body className={inter.className}>
+				<Navbar />
 
 				<main>{children}</main>
 			</body>

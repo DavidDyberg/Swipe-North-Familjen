@@ -1,0 +1,92 @@
+:root {
+	--black: #000000;
+	--white: #fff;
+
+	--red-dark: #721904;
+	--red-light: #8b341f;
+
+	--beige-dark: #cbc497;
+	--beige-light: #a89d55;
+
+	--mustard-dark: #c1a016;
+	--mustard-light: #d3b73d;
+
+	--card-width: 375px;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+/* nav {
+	display: flex;
+	justify-content: space-around;
+} */
+
+.not-found,
+.loading {
+	margin: 40vh 0 48px 0;
+	text-align: center;
+}
+
+.button {
+	background-color: var(--mustard-dark);
+	border-radius: 25px;
+	border-style: none;
+	color: var(--white);
+	cursor: pointer;
+	font-size: 16px;
+	font-weight: 700;
+	margin: 24px auto;
+	min-width: 250px;
+	text-transform: uppercase;
+	padding: 12px;
+}
+
+.button:hover {
+	background-color: var(--mustard-light);
+}
+
+.button > a,
+.button > a:visited,
+.button > a:active {
+	color: var(--white);
+	text-decoration: none;
+}
+
+.text-card {
+	background-color: var(--beige-dark);
+	border-color: var(--red-dark);
+	border-radius: 8px;
+	border-style: solid;
+	border-width: 4px;
+	display: flex;
+	flex-direction: column;
+	height: 660px;
+	justify-content: center;
+	margin: auto;
+	padding: 24px;
+	max-width: var(--card-width);
+}
+
+.text-card > h1 {
+	text-align: center;
+}
+
+.text-card > button {
+	background-color: var(--red-dark);
+}
+
+.text-card > button:hover {
+	background-color: var(--red-light);
+}
+
+.text-card > p {
+	height: 100%;
+	line-height: 1.5;
+}
+
+.shadow {
+	box-shadow:  8px 12px 20px -12px rgba(0, 0, 0, 0.75);
+	-webkit-box-shadow:  8px 12px 20px -12px rgba(0, 0, 0, 0.75);
+}
