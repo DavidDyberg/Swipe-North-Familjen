@@ -55,7 +55,7 @@ nav {
 }
 
 .text-card {
-	background-color: var(--mustard-dark);
+	background-color: var(--beige-dark);
 	border-color: var(--red-dark);
 	border-radius: 8px;
 	border-style: solid;
@@ -66,7 +66,6 @@ nav {
 	justify-content: center;
 	margin: auto;
 	padding: 24px;
-
 	max-width: var(--card-width);
 }
 
@@ -84,6 +83,7 @@ nav {
 
 .text-card > p {
 	height: 100%;
+	line-height: 1.5;
 }
 
 .shadow {
