@@ -1,5 +1,5 @@
 'use client'
-import '../hamburger.css'
+import '../styles/hamburger.css'
 import Link from 'next/link'
 import { useState } from 'react'
 import Logga from '../../public/Swipe-North-logga-svart.png'
