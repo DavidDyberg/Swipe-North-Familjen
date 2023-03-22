@@ -1,0 +1,66 @@
+.body {
+	background-image: url(../../public/startsida-bild1.jpg);
+	background-size: 100% 100%;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+}
+
+.main {
+	height: 100%;
+}
+
+.logga-container {
+	text-align: center;
+	margin-top: 10px;
+}
+
+.arrow-up-symbol {
+	color: white;
+	font-size: 80px;
+	text-align: center;
+}
+
+.title {
+	color: white;
+	font-size: 20px;
+	text-align: center;
+}
+
+.text {
+	color: white;
+	text-align: center;
+}
+
+.swipe-north-logga {
+	width: 200px;
+	height: 200px;
+}
+
+.button-container {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	margin-top: 100px;
+}
+
+.button {
+	width: 150px;
+	margin: 5px;
+	height: 30px;
+	border-radius: 16px;
+	color: white;
+	background-color: transparent;
+	border: 2px white solid;
+	cursor: pointer;
+}
+
+.icon-container {
+	text-align: center;
+	margin-top: 10px;
+}
+
+.icon {
+	height: 30px;
+	width: 30px;
+	margin: 5px;
+}
