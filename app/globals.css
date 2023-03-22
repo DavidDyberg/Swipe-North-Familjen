@@ -78,6 +78,10 @@ nav {
 	background-color: var(--red-dark);
 }
 
+.text-card > button:hover {
+	background-color: var(--red-light);
+}
+
 .text-card > p {
 	height: 100%;
 }
