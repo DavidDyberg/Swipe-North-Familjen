@@ -8,6 +8,7 @@
 .logga-container {
 	text-align: center;
 	margin: 20px;
+    margin-bottom: 50px;
 }
 
 .arrows-container {
@@ -32,7 +33,8 @@
 	min-width: 150px;
 	text-transform: uppercase;
 	padding: 12px;
-	margin-bottom: 200px;
+	margin-bottom: 220px;
+    margin-top: 20px;
 }
 
 .swipe-north-logga {
@@ -49,7 +51,7 @@
 }
 
 .button {
-	background-color: transparent;
+	background: linear-gradient(to right, #72180447, #8b351f5a);
 	border-radius: 25px;
 	border: var(--white) 2px solid;
 	color: var(--white);
@@ -57,7 +59,7 @@
 	font-size: 16px;
 	font-weight: 700;
 	margin: 8px auto;
-	min-width: 200px;
+	min-width: 250px;
 	text-transform: uppercase;
 	padding: 12px;
 }
