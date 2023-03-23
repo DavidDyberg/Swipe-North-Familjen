@@ -1,7 +1,6 @@
 .main {
 	background-image: url(../../public/startsida-bild1.jpg);
-
-	flex-grow: 1;
+    flex-grow: 1;
 	background-size: cover;
 	background-position: center;
 }
