@@ -18,25 +18,17 @@ export default function Startsida() {
 					className={styles['swipe-north-logga']}
 					src={photo}
 				></Image>
-			</div>
 
-			<Link href="/swipe-north">
-				<button className={styles.swipebutton}>BÖRJA SWIPEA</button>
-			</Link>
-
-			<div className={styles['arrows-container']}>
-				<Image className={styles.arrowimage} src={photo5}></Image>
+				<Link href="/swipe-north">
+					<button className={styles.swipebutton}>
+						HITTA DITT DRÖMJOBB
+					</button>
+				</Link>
 			</div>
 
 			<div className={styles['button-container']}>
 				<button className={styles.button}>LOGGA IN</button>
 				<button className={styles.button}>SKAPA KONTO</button>
-			</div>
-
-			<div className={styles['icon-container']}>
-				<Image className={styles.icon} src={photo2}></Image>
-				<Image className={styles.icon} src={photo3}></Image>
-				<Image className={styles.icon} src={photo4}></Image>
 			</div>
 		</main>
 	)

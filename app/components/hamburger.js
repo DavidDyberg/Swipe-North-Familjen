@@ -12,7 +12,7 @@ import Image from 'next/image'
 
 export default function Navbar() {
 	const [isOpen, setIsOpen] = useState(false)
-  
+
 	const toggleMenu = () => setIsOpen(!isOpen)
 	const closeMenu = () => setIsOpen(false)
 
@@ -21,8 +21,8 @@ export default function Navbar() {
 			<nav className="navbar">
 				<Image src={Ske} className="Ske"></Image>
 				<Image src={Logga} className="Logga"></Image>
-				<ul  className={`navMenu ${isOpen ? 'active' : ''}`}>
-				{/* // 	className={
+				<ul className={`navMenu ${isOpen ? 'active' : ''}`}>
+					{/* // 	className={
 				// 		isOpen === false
 				// 			? 'navMenu'
 				// 			: 'navMenu' + ' ' + 'active'
@@ -30,33 +30,45 @@ export default function Navbar() {
 				// > */}
 					<li className="navItem">
 						<Link href="../swipe-north">
-							<span onClick={closeMenu} className="navLink">Hitta jobb</span>
+							<span onClick={closeMenu} className="navLink">
+								Hitta jobb
+							</span>
 						</Link>
 					</li>
 					<li className="navItem">
 						<Link href="../profile">
-							<span onClick={closeMenu} className="navLink">Profil</span>
+							<span onClick={closeMenu} className="navLink">
+								Profil
+							</span>
 						</Link>
 					</li>
 					<li className="navItem">
 						<Link href="../matched-jobs">
-							<span onClick={closeMenu} className="navLink">Sparade jobb</span>
+							<span onClick={closeMenu} className="navLink">
+								Sparade jobb
+							</span>
 						</Link>
 					</li>
 					<li className="navItem">
 						<Link href="../skelleftea">
-							<span onClick={closeMenu} className="navLink">Skellefteå</span>
+							<span onClick={closeMenu} className="navLink">
+								Skellefteå
+							</span>
 						</Link>
 					</li>
 					<li className="navItem">
 						<Link href="../login">
-							<span onClick={closeMenu} className="navLink">Logga in</span>
+							<span onClick={closeMenu} className="navLink">
+								Logga in
+							</span>
 						</Link>
 					</li>
 				</ul>
 				<button
-				className={`hamburger ${isOpen ? 'active' : ''}`} onClick={toggleMenu}>
-				{/* // 	className={
+					className={`hamburger ${isOpen ? 'active' : ''}`}
+					onClick={toggleMenu}
+				>
+					{/* // 	className={
 				// 		isOpen === false
 				// 			? 'hamburger'
 				// 			: 'hamburger' + ' ' + 'active'

@@ -1,6 +1,6 @@
 .main {
 	background-image: url(../../public/startsida-bild1.jpg);
-    flex-grow: 1;
+	flex-grow: 1;
 	background-size: cover;
 	background-position: center;
 }
@@ -21,20 +21,18 @@
 }
 
 .swipebutton {
-	left: 115px;
-    top: 299px;
-	position: fixed;
-    background-color: #c19f16b3;
+	background: linear-gradient(to right, #721804b3, #8b351fb2);
 	border-radius: 25px;
-	border-style: none;
+	border: var(--white) 2px solid;
 	color: var(--white);
 	cursor: pointer;
 	font-size: 16px;
 	font-weight: 700;
-	margin: 24px auto;
+	margin: 8px auto;
 	min-width: 150px;
 	text-transform: uppercase;
 	padding: 12px;
+	margin-bottom: 200px;
 }
 
 .swipe-north-logga {
@@ -51,15 +49,15 @@
 }
 
 .button {
-	background-color: var(--mustard-dark);
+	background-color: transparent;
 	border-radius: 25px;
-	border-style: none;
+	border: var(--white) 2px solid;
 	color: var(--white);
 	cursor: pointer;
 	font-size: 16px;
 	font-weight: 700;
 	margin: 8px auto;
-	min-width: 150px;
+	min-width: 200px;
 	text-transform: uppercase;
 	padding: 12px;
 }
