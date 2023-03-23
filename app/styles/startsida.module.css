@@ -21,9 +21,20 @@
 }
 
 .swipebutton {
-	left: 131px;
-	top: 337px;
+	left: 115px;
+    top: 299px;
 	position: fixed;
+    background-color: #c19f16b3;
+	border-radius: 25px;
+	border-style: none;
+	color: var(--white);
+	cursor: pointer;
+	font-size: 16px;
+	font-weight: 700;
+	margin: 24px auto;
+	min-width: 150px;
+	text-transform: uppercase;
+	padding: 12px;
 }
 
 .swipe-north-logga {
@@ -40,14 +51,17 @@
 }
 
 .button {
-	width: 150px;
-	margin: 5px;
-	height: 30px;
-	border-radius: 16px;
-	color: white;
-	background-color: transparent;
-	border: 2px white solid;
+	background-color: var(--mustard-dark);
+	border-radius: 25px;
+	border-style: none;
+	color: var(--white);
 	cursor: pointer;
+	font-size: 16px;
+	font-weight: 700;
+	margin: 8px auto;
+	min-width: 150px;
+	text-transform: uppercase;
+	padding: 12px;
 }
 
 .icon-container {
