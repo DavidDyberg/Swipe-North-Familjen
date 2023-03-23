@@ -54,7 +54,7 @@ a {
 
 @media only screen and (max-width: 768px) {
 	.navMenu {
-		background-color: transparent;
+		background-color: #fff;
 		flex-direction: column;
 		left: -100%;
 		position: fixed;
@@ -84,7 +84,7 @@ a {
 	.hamburger {
 		cursor: pointer;
 		display: block;
-		background-color: #fff;
+		background-color: transparent;
 		border: none;
 	}
 
