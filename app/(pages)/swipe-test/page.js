@@ -38,6 +38,30 @@ function swipeNorthApp() {
 		return <div>Error: {error.message}</div>
 	}
 
+
+//TEST
+
+	// Define an array to store objects
+	let listArray = [];
+
+	// Define an object to add to array
+	//const savedJob = {name: 'John', age: 30};
+
+	// Add object to array
+	// listArray.push(`https://links.api.jobtechdev.se/joblinks?municipality=kicB_LgH_2Dk&occupation-field=${data.hits[number].id}`);
+
+	// Save array in local storage
+	// localStorage.setItem('listArray', JSON.stringify(listArray));
+
+	// Retrieve array from local storage
+	const retrievedArray = JSON.parse(localStorage.getItem('listArray'));
+
+	// Verify if retrieval was successful
+	// console.log(retrievedArray);
+
+
+
+
 	function back() {
 		//Max tio pga någon sorts begränsing i APIn
 		setNumber((prevNumber) => (prevNumber != 0 ? prevNumber - 1 : 9))
@@ -54,16 +78,28 @@ function swipeNorthApp() {
 				(setJobId(
 					`&occupation-field=${data.hits[number].occupation_field.concept_id}`
 				),
-				console.log(data.hits[number].occupation_field.concept_id),
-				console.log(
-					`https://links.api.jobtechdev.se/joblinks?municipality=kicB_LgH_2Dk&occupation-field=${data.hits[number].occupation_field.concept_id}`
-				))
+				listArray.push(`${data.hits[number].id}`),
+				localStorage.setItem('listArray', JSON.stringify(listArray)),
+				console.log(listArray),
+				console.log(retrievedArray)
+				// console.log(data.hits[number].occupation_field.concept_id),
+				// console.log(
+				// 	`https://links.api.jobtechdev.se/joblinks?municipality=kicB_LgH_2Dk&occupation-field=${data.hits[number].occupation_field.concept_id}`)
+				)
 		}
 	}
 
 	function swipeDown() {
 		setJobId('')
 	}
+
+
+
+	
+
+
+
+
 
 	return (
 		<>

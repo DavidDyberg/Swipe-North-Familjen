@@ -5,7 +5,11 @@
 }
 
 .card {
-	background-color: var(--beige-dark);
+	/* background-color: var(--beige-dark); */
+	/* background: #DFB2B9; /* fallback for older browsers */
+	/* background: linear-gradient(to bottom right,  #DFB2B9, #ECD0D5, #9192B0); */
+	
+	background-color: #fff;
 	display: flex;
 	flex-direction: column;
 	height: calc(98vh - 98px);
@@ -17,7 +21,7 @@
 
 .card,
 .annonsKnapp {
-	border-color: var(--red-dark);
+	border-color: var(--red-light);
 	border-radius: 8px;
 	border-style: solid;
 	border-width: 4px;
@@ -70,7 +74,7 @@
 }
 
 .annonsKnapp {
-	background-color: var(--red-dark);
+	background-color: var(--red-light);
 	color: var(--white);
 	font-weight: 700;
 	height: 48px;
