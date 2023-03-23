@@ -4,7 +4,7 @@ import card from '../../styles/card.module.css'
 import Link from 'next/link'
 import imgArr from './imgArray.js'
 
-function jobPicture() {
+function swipeNorthApp() {
 	const [data, setData] = useState(null)
 	const [isLoading, setIsLoading] = useState(false)
 	const [error, setError] = useState(null)
@@ -31,7 +31,7 @@ function jobPicture() {
 	}, [jobId])
 
 	if (isLoading) {
-		return <h1 className='loading'>Vi far norrut ...</h1>
+		return <h1 className="loading">Vi far norrut ...</h1>
 	}
 
 	if (error) {
@@ -67,7 +67,7 @@ function jobPicture() {
 
 	return (
 		<>
-			<div>
+			<div className={card.container}>
 				<div className={card.temporary}>
 					<button onClick={swipeNorth}>Swipe Upp (matcha)</button>
 					<br />
@@ -79,15 +79,20 @@ function jobPicture() {
 
 				{data && (
 					<div className={`shadow ${card.card}`}>
-						
-							<h1 className={card.headline}>{data.hits[number].headline}</h1>
-					
-						
-						<h2 className={card.employer}>{data.hits[number].employer.name}</h2>
+						<h1 className={card.headline}>
+							{data.hits[number].headline}
+						</h1>
+						<h2 className={card.employer}>
+							{data.hits[number].employer.name}
+						</h2>
 						{imgArr[data.hits[number].id.match(/[0-9]/)]}
-						<div className={card.brief}>{data.hits[number].brief}</div>
+						<div className={card.brief}>
+							{data.hits[number].brief}
+						</div>
 						<Link href={data.hits[number].source_links[0].url}>
-							<button className={card.annonsKnapp}>ÖPPNA ANNONS</button>
+							<button className={card.annonsKnapp}>
+								ÖPPNA ANNONS
+							</button>
 						</Link>
 					</div>
 				)}
@@ -96,4 +101,4 @@ function jobPicture() {
 	)
 }
 
-export default jobPicture
+export default swipeNorthApp

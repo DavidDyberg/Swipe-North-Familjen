@@ -1,9 +1,9 @@
 .main {
-    background-image: url(../../public/startsida-bild1.jpg);
-	
-    flex-grow: 1;
-    background-size: cover;
-    background-position: center ;
+	background-image: url(../../public/startsida-bild1.jpg);
+
+	flex-grow: 1;
+	background-size: cover;
+	background-position: center;
 }
 
 .logga-container {
@@ -11,30 +11,20 @@
 	margin: 20px;
 }
 
-
-
-.arrow-up-symbol {
-	color: white;
-	font-size: 40px;
-	
-    
-}
-
 .arrows-container {
-    text-align: center;
-    margin-top: -60px;
+	text-align: center;
+	margin-top: -60px;
 }
 
 .arrowimage {
-    width: 350px;
-    height: 350px;
+	width: 350px;
+	height: 350px;
 }
 
 .swipebutton {
-    left: 131px;
-    top: 337px;
-    position: fixed;
-    
+	left: 131px;
+	top: 337px;
+	position: fixed;
 }
 
 .swipe-north-logga {
@@ -46,9 +36,8 @@
 	align-items: center;
 	display: flex;
 	flex-direction: column;
-    margin: 10px;
-    margin-top: -10px;
-	
+	margin: 10px;
+	margin-top: -10px;
 }
 
 .button {
@@ -64,7 +53,6 @@
 
 .icon-container {
 	text-align: center;
-	
 }
 
 .icon {
