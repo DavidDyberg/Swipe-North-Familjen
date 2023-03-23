@@ -54,7 +54,7 @@ a {
 
 @media only screen and (max-width: 768px) {
 	.navMenu {
-		background-color: #fff;
+		background-color: transparent;
 		flex-direction: column;
 		left: -100%;
 		position: fixed;

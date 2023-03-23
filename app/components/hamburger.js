@@ -6,10 +6,6 @@ import Logga from '../../public/Swipe-North-logga-svart.png'
 import Ske from '../../public/skelleftea.png'
 import Image from 'next/image'
 
-// export default function Navbar() {
-// 	const [isOpen, setIsOpen] = useState(false)
-// 	const openMenu = () => setIsOpen(!isOpen)
-
 export default function Navbar() {
 	const [isOpen, setIsOpen] = useState(false)
 
@@ -21,6 +17,7 @@ export default function Navbar() {
 			<nav className="navbar">
 				<Image src={Ske} className="Ske"></Image>
 				<Image src={Logga} className="Logga"></Image>
+<<<<<<< HEAD
 				<ul className={`navMenu ${isOpen ? 'active' : ''}`}>
 					{/* // 	className={
 				// 		isOpen === false
@@ -28,6 +25,9 @@ export default function Navbar() {
 				// 			: 'navMenu' + ' ' + 'active'
 				// 	}
 				// > */}
+=======
+				<ul  className={`navMenu ${isOpen ? 'active' : ''}`}>
+>>>>>>> 53b1ac7 (transparent background)
 					<li className="navItem">
 						<Link href="../swipe-north">
 							<span onClick={closeMenu} className="navLink">
@@ -65,6 +65,7 @@ export default function Navbar() {
 					</li>
 				</ul>
 				<button
+<<<<<<< HEAD
 					className={`hamburger ${isOpen ? 'active' : ''}`}
 					onClick={toggleMenu}
 				>
@@ -75,6 +76,9 @@ export default function Navbar() {
 				// 	}
 				// 	onClick={openMenu}
 				// > */}
+=======
+				className={`hamburger ${isOpen ? 'active' : ''}`} onClick={toggleMenu}>
+>>>>>>> 53b1ac7 (transparent background)
 					<span className="navbarButton"></span>
 					<span className="navbarButton"></span>
 					<span className="navbarButton"></span>
