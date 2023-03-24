@@ -16,12 +16,12 @@ export default function Navbar() {
 		<div className="container">
 			<nav className="navbar">
 				<Link href="https://skelleftea.se/">
-				<Image src={Ske} className="Ske"></Image>
+					<Image src={Ske} className="Ske"></Image>
 				</Link>
 				<Link href="/">
-				<Image src={Logga} className="Logga"></Image>
+					<Image src={Logga} className="Logga"></Image>
 				</Link>
-				<ul  className={`navMenu ${isOpen ? 'active' : ''}`}>
+				<ul className={`navMenu ${isOpen ? 'active' : ''}`}>
 					<li className="navItem">
 						<Link href="../swipe-north">
 							<span onClick={closeMenu} className="navLink">
@@ -59,7 +59,9 @@ export default function Navbar() {
 					</li>
 				</ul>
 				<button
-				className={`hamburger ${isOpen ? 'active' : ''}`} onClick={toggleMenu}>
+					className={`hamburger ${isOpen ? 'active' : ''}`}
+					onClick={toggleMenu}
+				>
 					<span className="navbarButton"></span>
 					<span className="navbarButton"></span>
 					<span className="navbarButton"></span>
