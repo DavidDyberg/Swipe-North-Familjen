@@ -46,6 +46,7 @@ a {
 
 .navItem {
 	margin-left: 5rem;
+	border-radius: 8px;
 }
 
 .navLink {
@@ -54,7 +55,7 @@ a {
 
 @media only screen and (max-width: 768px) {
 	.navMenu {
-		background-color: #fff;
+		background: linear-gradient(to bottom right,#dfb2b9,#ecd0d5,#9192b0);
 		flex-direction: column;
 		left: -100%;
 		position: fixed;
