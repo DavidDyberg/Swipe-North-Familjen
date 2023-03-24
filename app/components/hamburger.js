@@ -30,7 +30,7 @@ export default function Navbar() {
 						</Link>
 					</li>
 					<li className="navItem">
-						<Link href="../profile">
+						<Link href="../profil">
 							<span onClick={closeMenu} className="navLink">
 								Profil
 							</span>
