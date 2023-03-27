@@ -19,8 +19,8 @@ html {
 }
 
 body {
-	background: #DFB2B9; /* fallback for older browsers */
-	background: linear-gradient(to bottom right,  #DFB2B9, #ECD0D5, #9192B0);
+	background: #dfb2b9; /* fallback for older browsers */
+	background: linear-gradient(to bottom right, #dfb2b9, #ecd0d5, #9192b0);
 	display: flex;
 	flex-direction: column;
 	margin: 0;

@@ -23,10 +23,10 @@ export default function Startsida() {
 			</div>
 
 			<div className={styles['button-container']}>
-				<Link href='/login'>
+				<Link href="/login">
 					<button className={styles.button}>LOGGA IN</button>
 				</Link>
-				
+
 				<button className={styles.button}>SKAPA KONTO</button>
 			</div>
 		</main>
