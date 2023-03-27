@@ -112,3 +112,7 @@ body {
 	box-shadow: 8px 12px 20px -12px rgba(0, 0, 0, 0.75);
 	-webkit-box-shadow: 8px 12px 20px -12px rgba(0, 0, 0, 0.75);
 }
+
+div.text-card.saved-jobs {
+	justify-content: flex-start;
+}
