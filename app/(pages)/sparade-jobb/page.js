@@ -9,7 +9,6 @@ function SavedJobs() {
 		setSavedIds(data)
 	}, [])
 
-	// check if savedIds is null and insert a placeholder job
 	if (savedIds === null) {
 		savedIds = [{ headline: 'Inga sparade annonser' }]
 	}
