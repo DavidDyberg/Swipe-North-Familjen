@@ -44,6 +44,7 @@
 	min-width: 220px;
 	text-transform: uppercase;
 	padding: 12px;
+	margin-bottom: 50px;
 }
 
 .forgot-password {
@@ -51,7 +52,27 @@
 	text-decoration: underline;
 }
 
-.social-media-icons {
+.social-media-container {
+	display: flex;
+	flex-direction: column;
+	
+}
+
+.social-media-login-button {
+	padding: 8px;
+	width: 250px;
+	display: flex;
+	align-items: center;
+	
+	margin: 5px;
+	border-radius: 8px;
+	border: var(--red-light) 2px solid;
+	background-color: white;
+	font-size: 16px;
+}
+
+.social-media-icon {
 	height: 20px;
 	width: 20px;
+	margin: 5px;
 }

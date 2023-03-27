@@ -35,31 +35,31 @@ export default function Login() {
 					</form>
 					<div className={styles['social-media-container']}>
 						<button
-							className={styles['social-media-login-buttons']}
+							className={styles['social-media-login-button']}
 						>
 							{' '}
 							<Image
-								className={styles['social-media-icons']}
+								className={styles['social-media-icon']}
 								src={linkedin}
 							></Image>
 							Loggga in med Linkedin
 						</button>
 						<button
-							className={styles['social-media-login-buttons']}
+							className={styles['social-media-login-button']}
 						>
 							{' '}
 							<Image
-								className={styles['social-media-icons']}
+								className={styles['social-media-icon']}
 								src={google}
 							></Image>
 							Logga in med Google
 						</button>
 						<button
-							className={styles['social-media-login-buttons']}
+							className={styles['social-media-login-button']}
 						>
-							{' '}
+							{''}
 							<Image
-								className={styles['social-media-icons']}
+								className={styles['social-media-icon']}
 								src={facebook}
 							></Image>
 							Logga in med Facebook
