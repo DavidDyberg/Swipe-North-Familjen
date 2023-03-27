@@ -34,9 +34,7 @@ export default function Login() {
 						</button>
 					</form>
 					<div className={styles['social-media-container']}>
-						<button
-							className={styles['social-media-login-button']}
-						>
+						<button className={styles['social-media-login-button']}>
 							{' '}
 							<Image
 								className={styles['social-media-icon']}
@@ -44,9 +42,7 @@ export default function Login() {
 							></Image>
 							Loggga in med Linkedin
 						</button>
-						<button
-							className={styles['social-media-login-button']}
-						>
+						<button className={styles['social-media-login-button']}>
 							{' '}
 							<Image
 								className={styles['social-media-icon']}
@@ -54,9 +50,7 @@ export default function Login() {
 							></Image>
 							Logga in med Google
 						</button>
-						<button
-							className={styles['social-media-login-button']}
-						>
+						<button className={styles['social-media-login-button']}>
 							{''}
 							<Image
 								className={styles['social-media-icon']}
