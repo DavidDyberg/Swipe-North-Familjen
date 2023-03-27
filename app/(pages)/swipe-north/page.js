@@ -74,12 +74,13 @@ function swipeNorthApp() {
 					<button onClick={back}>Vänster Swipe</button>
 					<button onClick={next}>Höger Swipe</button>
 					<br />
-					<button onClick={swipeDown}>Swipe Ner (Ej intressed)</button>
+					<button onClick={swipeDown}>
+						Swipe Ner (Ej intressed)
+					</button>
 				</div>
 
 				{data && (
 					<div className={`shadow ${card.card}`}>
-
 						<div className={card.headlineContainer}>
 							<h1 className={card.headline}>
 								{data.hits[number].headline}
@@ -94,21 +95,17 @@ function swipeNorthApp() {
 
 						{imgArr[data.hits[number].id.match(/[0-9]/)]}
 
-
 						<div className={card.briefContainer}>
 							<div className={card.brief}>
 								{data.hits[number].brief}
 							</div>
 						</div>
 
-
 						<Link href={data.hits[number].source_links[0].url}>
 							<button className={card.annonsKnapp}>
 								ÖPPNA ANNONS
 							</button>
 						</Link>
-
-
 					</div>
 				)}
 			</div>

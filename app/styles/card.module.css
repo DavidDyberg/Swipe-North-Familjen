@@ -8,7 +8,7 @@
 	/* background-color: var(--beige-dark); */
 	/* background: #DFB2B9; /* fallback for older browsers */
 	/* background: linear-gradient(to bottom right,  #DFB2B9, #ECD0D5, #9192B0); */
-	
+
 	background-color: #fff;
 	display: flex;
 	flex-direction: column;
