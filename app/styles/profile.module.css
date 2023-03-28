@@ -40,3 +40,9 @@
 .textContainer p {
 	font-size: 0.7em;
 }
+
+.mail,
+.user {
+	width: 15px;
+	height: 15px;
+}
