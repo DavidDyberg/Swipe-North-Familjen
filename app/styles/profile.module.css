@@ -7,9 +7,36 @@
 	margin: 0 24px 24px 24px;
 	max-width: var(--card-width);
 	position: relative;
-    border-color: var(--red-light);
-    border-radius: 8px;
-    border-style: solid;
-    border-width: 4px;
+	border-color: var(--red-light);
+	border-radius: 8px;
+	border-style: solid;
+	border-width: 4px;
 }
 
+.profileCard {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.personImg {
+	border-radius: 8px;
+	border: 3px solid var(--red-light);
+	margin: 24px;
+	width: 200px;
+	height: 250px;
+}
+
+.textContainer {
+	width: 300px;
+	height: 100px;
+}
+
+.textContainer h4 {
+	text-decoration: 3px underline var(--red-light);
+}
+
+.textContainer p {
+	font-size: 0.7em;
+}

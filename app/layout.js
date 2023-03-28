@@ -8,9 +8,9 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata = {
 	title: 'Swipe North',
 	description: 'Hitta ditt nya jobb i Skellefteå',
-	icons : {
+	icons: {
 		icon: './favicon-32x32.png',
-	}
+	},
 }
 
 export default function RootLayout({ children }) {

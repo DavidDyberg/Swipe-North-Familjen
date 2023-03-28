@@ -78,7 +78,7 @@
 	margin: 5px;
 }
 
-@media screen and (max-height: 700px){
+@media screen and (max-height: 700px) {
 	.social-media-login-button {
 		padding: 5px;
 	}

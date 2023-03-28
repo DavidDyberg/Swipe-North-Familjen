@@ -32,10 +32,11 @@ export default function Login() {
 						</p>
 
 						<Link href="/skapa-konto">
-							<p className={styles['skapa-konto']}>Har du inget konto? Skapa konto.</p>
+							<p className={styles['skapa-konto']}>
+								Har du inget konto? Skapa konto.
+							</p>
 						</Link>
-						
-						
+
 						<button className={styles['login-button']}>
 							Logga in
 						</button>

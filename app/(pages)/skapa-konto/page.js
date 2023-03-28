@@ -12,7 +12,7 @@ export default function SkapaKonto() {
 
 				<div className={styles['form-container']}>
 					<form>
-                        <input
+						<input
 							className={styles['login-form']}
 							placeholder="Ditt namn"
 							required
@@ -34,7 +34,7 @@ export default function SkapaKonto() {
 							required
 						/>
 
-                        <input
+						<input
 							className={styles['login-form']}
 							type="password"
 							name="password"
@@ -42,8 +42,6 @@ export default function SkapaKonto() {
 							required
 						/>
 
-                       
-						
 						<button className={styles['login-button']}>
 							Skapa konto
 						</button>
