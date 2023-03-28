@@ -5,7 +5,7 @@ import personImg from '../../../public/profileImg.png'
 export default function Profile() {
 	return (
 		<>
-			<div className={profile.container}>
+			<div className={`shadow ${profile.container}`}>
 				<div className={profile.profileCard}>
 					<Image className={profile.personImg} src={personImg} />
 					<div className={profile.textContainer}>
