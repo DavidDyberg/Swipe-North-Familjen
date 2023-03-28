@@ -79,11 +79,12 @@
 }
 
 @media screen and (max-height: 700px) {
-	.social-media-login-button {
-		padding: 5px;
+	
+	.social-media-container {
+		margin-bottom: 40px;
 	}
 
-	.social-media-container {
+	.login-button {
 		margin-bottom: 20px;
 	}
 }
