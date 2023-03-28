@@ -10,8 +10,6 @@ export const metadata = {
 	description: 'Hitta ditt nya jobb i Skellefteå',
 	icons : {
 		icon: './favicon-32x32.png',
-
-
 	}
 }
 
