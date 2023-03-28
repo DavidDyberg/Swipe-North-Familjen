@@ -47,14 +47,16 @@
 	margin-bottom: 50px;
 }
 
-.forgot-password {
+.forgot-password,
+.skapa-konto {
 	color: var(--red-light);
 	text-decoration: underline;
 }
 
 .social-media-container {
-	display: flex;
 	flex-direction: column;
+	display: flex;
+	align-items: center;
 }
 
 .social-media-login-button {
