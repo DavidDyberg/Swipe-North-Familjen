@@ -62,12 +62,12 @@
 	width: 250px;
 	display: flex;
 	align-items: center;
-
 	margin: 5px;
 	border-radius: 8px;
 	border: var(--red-light) 2px solid;
 	background-color: white;
 	font-size: 16px;
+	color: black;
 }
 
 .social-media-icon {
