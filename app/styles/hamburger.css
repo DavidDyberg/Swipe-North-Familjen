@@ -4,17 +4,18 @@
 	display: -ms-flexbox;
 	display: flex;
 	justify-content: space-around;
-	padding: 12px;
+	/* padding: 8px; */
 }
 
 .Ske {
+	margin: 24px;
 	height: 40px;
 	width: 70px;
 }
 
 .Logga {
 	height: 60px;
-	width: 60px;
+	width: 70px;
 }
 .hamburger {
 	display: none;
@@ -83,6 +84,7 @@ a {
 	}
 
 	.hamburger {
+		margin: 24px;
 		cursor: pointer;
 		display: block;
 		background-color: transparent;

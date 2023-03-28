@@ -1,0 +1,15 @@
+.container {
+	background-color: #fff;
+	display: flex;
+	flex-direction: column;
+	height: calc(98vh - 98px);
+	line-height: 1.3;
+	margin: 0 24px 24px 24px;
+	max-width: var(--card-width);
+	position: relative;
+    border-color: var(--red-light);
+    border-radius: 8px;
+    border-style: solid;
+    border-width: 4px;
+}
+

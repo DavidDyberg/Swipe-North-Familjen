@@ -1,7 +1,11 @@
+import profile from '../../styles/profile.module.css'
+
 export default function Profile() {
 	return (
-		<main>
-			<h1>Profil</h1>
-		</main>
+		<>
+		<div className={profile.container}>
+			
+		</div>
+		</>
 	)
 }
