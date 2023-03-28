@@ -9,7 +9,7 @@ export const metadata = {
 	title: 'Swipe North',
 	description: 'Hitta ditt nya jobb i Skellefteå',
 	icons : {
-		icon: './favicon-16x16.png',
+		icon: './favicon-32x32.png',
 
 	}
 }
