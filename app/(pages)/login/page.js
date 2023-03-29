@@ -8,7 +8,7 @@ import facebook from '../../../public/facebook.webp'
 export default function Login() {
 	return (
 		<main>
-			<div className={styles['login-card']}>
+			<div className='text-card'>
 				<h1>Logga in</h1>
 
 				<div className={styles['form-container']}>

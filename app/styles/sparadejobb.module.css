@@ -1,0 +1,49 @@
+.h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.sparade-jobb-container {
+    display: flex;
+    align-items: center;
+}
+
+.sparade-jobb-image {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+}
+
+.sparade-jobb-beskrivning {
+    width: 200px;
+    margin: 10px;
+}
+
+.ta-bort-jobb {
+    font-size: 20px;
+}
+
+.employer-name {
+    text-align: center;
+    color: gray;
+}
+
+.button-container {
+    text-align: center;
+    margin: 20px;
+}
+
+.button {
+    border-radius: 8px;
+    border: none;
+    color: white;
+    background-color: #721804bb;
+    width: 180px;
+    height: 30px;
+}
+
+.underline {
+    background-color: #721904;
+    margin: 10px;
+    
+}

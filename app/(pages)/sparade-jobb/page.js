@@ -18,6 +18,7 @@ function SavedJobs() {
 			<h1>Sparade jobb</h1>
 			<br />
 			<br />
+
 			{savedIds.map((job) => (
 				<div key={job.id}>
 					<h2>{job.headline}</h2>
