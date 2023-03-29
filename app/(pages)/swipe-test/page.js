@@ -1,7 +1,7 @@
 'use client'
 import { React, useState, useEffect } from 'react'
 import card from '../../styles/card.module.css'
-import '../styles/hideOverflow.css'
+import '../../styles/hideOverflow.css'
 import Link from 'next/link'
 import imgArr from './imgArray.js'
 import dynamic from 'next/dynamic'
