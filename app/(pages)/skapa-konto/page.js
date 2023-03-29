@@ -1,18 +1,23 @@
 import styles from '../../styles/login.module.css'
 import Image from 'next/image'
-import Link from 'next/link'
 import linkedin from '../../../public/linkedin.png'
 import google from '../../../public/google.png'
 import facebook from '../../../public/facebook.webp'
 
-export default function Login() {
+export default function SkapaKonto() {
 	return (
 		<main>
 			<div className={styles['login-card']}>
-				<h1>Logga in</h1>
+				<h1>Skapa konto</h1>
 
 				<div className={styles['form-container']}>
 					<form>
+						<input
+							className={styles['login-form']}
+							placeholder="Ditt namn"
+							required
+						/>
+
 						<input
 							className={styles['login-form']}
 							type="email"
@@ -20,6 +25,7 @@ export default function Login() {
 							placeholder="E-post"
 							required
 						/>
+
 						<input
 							className={styles['login-form']}
 							type="password"
@@ -27,18 +33,17 @@ export default function Login() {
 							placeholder="Lösenord"
 							required
 						/>
-						<p className={styles['forgot-password']}>
-							Glömt lösenord?
-						</p>
 
-						<Link href="/skapa-konto">
-							<p className={styles['skapa-konto']}>
-								Har du inget konto? Skapa konto.
-							</p>
-						</Link>
+						<input
+							className={styles['login-form']}
+							type="password"
+							name="password"
+							placeholder="Upprepa lösenord"
+							required
+						/>
 
 						<button className={styles['login-button']}>
-							Logga in
+							Skapa konto
 						</button>
 					</form>
 					<div className={styles['social-media-container']}>
@@ -48,7 +53,7 @@ export default function Login() {
 								className={styles['social-media-icon']}
 								src={linkedin}
 							></Image>
-							Logga in med Linkedin
+							Skapa konto med Linkedin
 						</button>
 						<button className={styles['social-media-login-button']}>
 							{' '}
@@ -56,7 +61,7 @@ export default function Login() {
 								className={styles['social-media-icon']}
 								src={google}
 							></Image>
-							Logga in med Google
+							Skapa konto med Google
 						</button>
 						<button className={styles['social-media-login-button']}>
 							{''}
@@ -64,7 +69,7 @@ export default function Login() {
 								className={styles['social-media-icon']}
 								src={facebook}
 							></Image>
-							Logga in med Facebook
+							Skapa konto med Facebook
 						</button>
 					</div>
 				</div>

@@ -37,7 +37,7 @@ export default function Navbar() {
 						</Link>
 					</li>
 					<li className="navItem">
-						<Link href="../matched-jobs">
+						<Link href="../sparade-jobb">
 							<span onClick={closeMenu} className="navLink">
 								Sparade jobb
 							</span>

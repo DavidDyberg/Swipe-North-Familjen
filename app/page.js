@@ -27,7 +27,9 @@ export default function Startsida() {
 					<button className={styles.button}>LOGGA IN</button>
 				</Link>
 
-				<button className={styles.button}>SKAPA KONTO</button>
+				<Link href="/skapa-konto">
+					<button className={styles.button}>SKAPA KONTO</button>
+				</Link>
 			</div>
 		</main>
 	)

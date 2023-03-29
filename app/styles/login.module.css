@@ -47,14 +47,16 @@
 	margin-bottom: 50px;
 }
 
-.forgot-password {
+.forgot-password,
+.skapa-konto {
 	color: var(--red-light);
 	text-decoration: underline;
 }
 
 .social-media-container {
-	display: flex;
 	flex-direction: column;
+	display: flex;
+	align-items: center;
 }
 
 .social-media-login-button {
@@ -74,4 +76,15 @@
 	height: 20px;
 	width: 20px;
 	margin: 5px;
+}
+
+@media screen and (max-height: 700px) {
+	
+	.social-media-container {
+		margin-bottom: 40px;
+	}
+
+	.login-button {
+		margin-bottom: 20px;
+	}
 }
