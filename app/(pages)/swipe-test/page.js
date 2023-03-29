@@ -23,7 +23,7 @@ function swipeNorthApp() {
 		async function fetchData() {
 			try {
 				const response = await fetch(
-					`https://links.api.jobtechdev.se/joblinks?municipality=kicB_LgH_2Dk&limit=100${jobId}`
+					`https://links.api.jobtechdev.se/joblinks?municipality=kicB_LgH_2Dk&limit=10${jobId}`
 				)
 				const data = await response.json()
 				setData(data)
@@ -55,11 +55,11 @@ function swipeNorthApp() {
 	// }
 
 	function back() {
-		setNumber((prevNumber) => (prevNumber != 0 ? prevNumber - 1 : 99))
+		setNumber((prevNumber) => (prevNumber != 0 ? prevNumber - 1 : 9))
 	}
 
 	function next() {
-		setNumber((prevNumber) => (prevNumber < 99 ? prevNumber + 1 : 0))
+		setNumber((prevNumber) => (prevNumber < 9 ? prevNumber + 1 : 0))
 	}
 
 	function swipeNorth() {
