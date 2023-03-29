@@ -13,15 +13,15 @@ export default function Profile() {
 					<div className={profile.textContainer}>
 					    <h4>Sara Larsson</h4>
 						<p>
-						25år, Stockholm
+						 25år, Stockholm
 						<br />
 						<Image className={profile.mail}
 							src={mail} />
-						       SaraLarsson@gmail.com
+						       &nbsp; SaraLarsson@gmail.com
 							   <br />
 							<Image className={profile.user}
 							src={user} />
-							   SaraLarsson25
+							  &nbsp; SaraLarsson25
 							<br />
 							<br />
 							Är en effektiv och flexibel person som ständigt vill

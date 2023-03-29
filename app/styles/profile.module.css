@@ -21,11 +21,11 @@
 }
 
 .personImg {
-	border-radius: 8px;
+	border-radius: 50%;
 	border: 3px solid var(--red-light);
 	margin: 24px;
 	width: 200px;
-	height: 250px;
+	height: 200px;
 }
 
 .textContainer {
