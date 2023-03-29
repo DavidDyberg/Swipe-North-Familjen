@@ -17,7 +17,6 @@ function swipeNorthApp() {
 	const [number, setNumber] = useState(0)
 	const [jobId, setJobId] = useState('')
 	const [dataArray, setDataArray] = useState('')
-	// const [activeCard, setActiveCard] = useState('')
 
 	useEffect(() => {
 		setIsLoading(true)
@@ -126,7 +125,7 @@ function swipeNorthApp() {
 	const onSwipe = (direction) => {
 		if (direction === 'up') {
 			swipeNorth()
-			next()
+			setNumber(0)
 		} else if (direction === 'down') {
 			swipeDown()
 			next()
@@ -143,7 +142,7 @@ function swipeNorthApp() {
 			<div>
 				{data &&
 					dataArray.map((jobAdvert, index) => (
-						<TinderCard onSwipe={onSwipe}>
+						<TinderCard onSwipe={onSwipe} key={jobAdvert.id}>
 							<div
 								className={
 									index === number
@@ -152,10 +151,36 @@ function swipeNorthApp() {
 								}
 							>
 								<div className={`shadow ${card.card}`}>
-									<div key={jobAdvert.id}>
+								<div className={card.headlineContainer}>
 										<h1 className={card.headline}>
 											{jobAdvert.headline}
 										</h1>
+									</div>
+
+									<div className={card.employerContainer}>
+										<h2 className={card.employer}>
+											{jobAdvert.employer.name}
+										</h2>
+									</div>
+
+									{imgArr[jobAdvert.id.match(/[0-9]/)]}
+
+									<div className={card.briefContainer}>
+										<div className={card.brief}>
+											{jobAdvert.brief}
+										</div>
+									</div>
+
+									<Link href={jobAdvert.source_links[0].url}>
+										<button className={card.annonsKnapp}>
+											ÖPPNA ANNONS
+										</button>
+									</Link>
+									{/* <div className={card.headlineContainer}>
+										<h1 className={card.headline}>
+											{jobAdvert.headline}
+										</h1>
+									</div>
 										<h2 className={card.employer}>
 											{jobAdvert.employer.name}
 										</h2>
@@ -182,8 +207,10 @@ function swipeNorthApp() {
 													ÖPPNA ANNONS
 												</button>
 											</Link>
-										</div>
-									</div>
+										</div> */}
+									
+
+									
 								</div>
 							</div>
 						</TinderCard>
