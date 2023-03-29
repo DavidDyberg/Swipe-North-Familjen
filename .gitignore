@@ -31,4 +31,4 @@ yarn-error.log*
 # vercel
 .vercel
 
-**/swipe-test
+# **/swipe-test
