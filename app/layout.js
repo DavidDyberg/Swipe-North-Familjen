@@ -7,10 +7,10 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
 	title: 'Swipe North',
-	description: 'Hitta ditt nya jobb i Skellefteå',
-	icons : {
+	description: 'Hitta ditt nya drömjobb i Skellefteå',
+	icons: {
 		icon: './favicon-32x32.png',
-	}
+	},
 }
 
 export default function RootLayout({ children }) {

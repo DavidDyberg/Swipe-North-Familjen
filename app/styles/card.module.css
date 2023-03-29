@@ -1,7 +1,10 @@
 .container {
-	display: flex;
+	display: none;
 	flex-direction: row;
 	justify-content: center;
+	position: absolute;
+	right: -100vw;
+	transition: all 5s;
 }
 
 .card {
@@ -103,4 +106,9 @@
 
 	/* position: absolute;
 	bottom: 0; */
+}
+
+.active {
+	display: flex;
+	position: unset;
 }
