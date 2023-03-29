@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from './styles/startsida.module.css'
+import './styles/hideOverflow.css'
 import Link from 'next/link'
 import photo from '../public/swipe-north-logga-vit.png'
 
