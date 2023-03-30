@@ -61,6 +61,7 @@ function SavedJobs() {
 {savedIds !== null ? (
     savedIds.map((job) => (
         <div key={job.id}>    
+            <hr className={styles.underline}/>
             <div className={styles['sparade-jobb-container']}>
                 <h4 className={styles['sparade-jobb-beskrivning']}>{job.headline}</h4>
                 <p onClick={() => removeJob(job.id)} className={styles['ta-bort-jobb']}>&nbsp; &nbsp; &#9587;</p>
@@ -73,7 +74,6 @@ function SavedJobs() {
             <div className={styles['button-container']}>
                 <button className='button'>ANSÖK NU</button>
             </div>
-            <hr className={styles.underline}/>
         </div>
     ))
 ) : (

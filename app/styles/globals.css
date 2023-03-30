@@ -113,8 +113,9 @@ body {
 }
 
 div.text-card.saved-jobs {
+	height: unset;
 	justify-content: flex-start;
-	margin-bottom: 24px;
+	margin-bottom: 48px;
 }
 
 .displayNone {

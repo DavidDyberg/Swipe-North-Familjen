@@ -16,7 +16,7 @@ export default function Startsida() {
 					src={photo}
 				></Image>
 
-				<Link href="/swipe-north">
+				<Link href="/swipe-test">
 					<button className={styles.swipebutton}>
 						HITTA DITT DRÖMJOBB
 					</button>
