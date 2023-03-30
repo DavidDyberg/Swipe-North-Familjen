@@ -23,8 +23,6 @@ html {
 
 main {
 	padding: 0 24px;
-	height: 70vh;
-
 }
 
 body {
@@ -33,7 +31,8 @@ body {
 	display: flex;
 	flex-direction: column;
 	margin: 0;
-	min-height: 100vh;
+	height: 70vh;
+	/* min-height: 100vh; */
 	/* min-height: 100svh; */
 }
 
