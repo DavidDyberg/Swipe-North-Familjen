@@ -2,11 +2,13 @@
 import React from 'react'
 import Link from 'next/link'
 
+import ske from '../../styles/skelleftea.module.css'
+
 export default function Skelleftea() {
 	return (
 		<div className="text-page">
-			<div className="text-card shadow">
-				<h1>Skellefteå</h1>
+			<div className={`shadow ${ske.textCard}`}>
+				<h1 className={ske.logg}>Skellefteå</h1>
 				<p>
 					En av de största fördelarna med Skellefteå är att människor
 					hinner mer utan att behöva skruva upp tempot. Mångsidigheten

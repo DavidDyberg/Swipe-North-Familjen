@@ -81,10 +81,7 @@ body {
 }
 
 .text-card {
-	/* background-color: var(--beige-dark); */
 	background: #fff; /* fallback for older browsers */
-	/* background: linear-gradient(to bottom right,  #DFB2B9, #ECD0D5, #9192B0); */
-	/* background: linear-gradient(to bottom right,  #949CC0, #DFB2B9, #9192B0); */
 	border-color: var(--red-light);
 	border-radius: 8px;
 	border-style: solid;
@@ -96,7 +93,7 @@ body {
 	padding: 0 24px;
 	margin: 0 24px;
 	max-width: var(--card-width);
-	height: 70vh;
+	min-height: 70vh;
 }
 
 .text-card > h1 {
