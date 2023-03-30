@@ -96,6 +96,7 @@ body {
 	padding: 0 24px;
 	margin: 0 24px;
 	max-width: var(--card-width);
+	height: calc(100vh - 60px);
 }
 
 .text-card > h1 {
