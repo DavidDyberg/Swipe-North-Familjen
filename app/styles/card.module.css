@@ -26,7 +26,7 @@
 	border-color: var(--red-light);
 	border-radius: 8px;
 	border-style: solid;
-	border-width: 4px;
+	border-width: 2px;
 }
 
 .headline,
@@ -96,7 +96,8 @@
 }
 
 .annonsKnapp {
-	background-color: var(--red-light);
+	background: linear-gradient(to right, #721804b3, #8b351fb2);
+	/* background-color: var(--red-light); */
 	color: var(--white);
 	cursor: pointer;
 	font-weight: 700;

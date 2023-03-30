@@ -19,7 +19,8 @@
     "react-dom": "18.2.0",
     "react-swipe": "^6.0.4",
     "react-swipeable": "^7.0.0",
-    "react-tinder-card": "^1.6.2"
+    "react-tinder-card": "^1.6.2",
+    "reactjs-popup": "^2.0.5"
   },
   "devDependencies": {
     "prettier": "2.8.4"
