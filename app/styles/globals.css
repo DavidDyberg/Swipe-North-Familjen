@@ -31,9 +31,8 @@ body {
 	display: flex;
 	flex-direction: column;
 	margin: 0;
-	height: 70vh;
-	/* min-height: 100vh; */
-	/* min-height: 100svh; */
+	min-height: 100vh; 
+	height: 100svh;
 }
 
 * {
