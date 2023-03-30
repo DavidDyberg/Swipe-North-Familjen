@@ -17,14 +17,15 @@ function swipeNorthApp() {
 	const [number, setNumber] = useState(0)
 	const [jobId, setJobId] = useState('')
 	const [dataArray, setDataArray] = useState('')
-	// const [activeCard, setActiveCard] = useState('')
+	const delay = 500
+	let timerId
 
 	useEffect(() => {
 		setIsLoading(true)
 		async function fetchData() {
 			try {
 				const response = await fetch(
-					`https://links.api.jobtechdev.se/joblinks?municipality=kicB_LgH_2Dk&limit=10${jobId}`
+					`https://links.api.jobtechdev.se/joblinks?municipality=kicB_LgH_2Dk&limit=20${jobId}`
 				)
 				const data = await response.json()
 				setData(data)
@@ -56,11 +57,11 @@ function swipeNorthApp() {
 	// }
 
 	function back() {
-		setNumber((prevNumber) => (prevNumber != 0 ? prevNumber - 1 : 9))
+		setNumber((prevNumber) => (prevNumber != 0 ? prevNumber - 1 : 19))
 	}
 
 	function next() {
-		setNumber((prevNumber) => (prevNumber < 9 ? prevNumber + 1 : 0))
+		setNumber((prevNumber) => (prevNumber < 19 ? prevNumber + 1 : 0))
 	}
 
 	function swipeNorth() {
@@ -70,6 +71,7 @@ function swipeNorthApp() {
 				id: data.hits[number].id,
 				headline: data.hits[number].headline,
 				employerName: data.hits[number].employer.name,
+				link: data.hits[number].source_links[0].url,
 			}
 
 			const savedIds = JSON.parse(localStorage.getItem('savedIds')) || []
@@ -91,7 +93,6 @@ function swipeNorthApp() {
 
 	function swipeDown() {
 		setJobId('')
-		//localStorage.clear()
 
 		if (data) {
 			const notInterestedId = { notInterestedId: data.hits[number].id }
@@ -124,18 +125,40 @@ function swipeNorthApp() {
 	}
 
 	const onSwipe = (direction) => {
+		swipeHandler(direction)
+
+		// if (direction === 'up') {
+		// 	swipeHandler()
+		// } else if (direction === 'down') {
+		// 	swipeDown()
+		// 	next()
+		// } else if (direction === 'left') {
+		// 	next()
+		// } else if (direction === 'right') {
+		// 	back()
+		// }
+		// console.log('You swiped: ' + direction)
+	}
+
+	function swipeHandler(direction) {
 		if (direction === 'up') {
 			swipeNorth()
-			next()
 		} else if (direction === 'down') {
 			swipeDown()
-			next()
 		} else if (direction === 'left') {
 			next()
 		} else if (direction === 'right') {
 			back()
 		}
 		console.log('You swiped: ' + direction)
+
+		if (timerId) {
+		clearTimeout(timerId);
+		}
+		timerId = setTimeout(() => {
+		swipeNorth()
+		timerId = null
+		}, delay)
 	}
 
 	return (
@@ -143,7 +166,7 @@ function swipeNorthApp() {
 			<div>
 				{data &&
 					dataArray.map((jobAdvert, index) => (
-						<TinderCard onSwipe={onSwipe}>
+						<TinderCard onSwipe={onSwipe} key={jobAdvert.id}>
 							<div
 								className={
 									index === number
@@ -152,10 +175,36 @@ function swipeNorthApp() {
 								}
 							>
 								<div className={`shadow ${card.card}`}>
-									<div key={jobAdvert.id}>
+								<div className={card.headlineContainer}>
 										<h1 className={card.headline}>
 											{jobAdvert.headline}
 										</h1>
+									</div>
+
+									<div className={card.employerContainer}>
+										<h2 className={card.employer}>
+											{jobAdvert.employer.name}
+										</h2>
+									</div>
+
+									{imgArr[jobAdvert.id.match(/[0-9]/)]}
+
+									<div className={card.briefContainer}>
+										<div className={card.brief}>
+											{jobAdvert.brief}
+										</div>
+									</div>
+
+									<Link href={jobAdvert.source_links[0].url}>
+										<button className={card.annonsKnapp}>
+											ÖPPNA ANNONS
+										</button>
+									</Link>
+									{/* <div className={card.headlineContainer}>
+										<h1 className={card.headline}>
+											{jobAdvert.headline}
+										</h1>
+									</div>
 										<h2 className={card.employer}>
 											{jobAdvert.employer.name}
 										</h2>
@@ -182,8 +231,10 @@ function swipeNorthApp() {
 													ÖPPNA ANNONS
 												</button>
 											</Link>
-										</div>
-									</div>
+										</div> */}
+									
+
+									
 								</div>
 							</div>
 						</TinderCard>

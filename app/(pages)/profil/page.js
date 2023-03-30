@@ -35,6 +35,8 @@ export default function Profile() {
 							Letar yrken inom: söker brett, lite extra sugen på
 							IT, marknadsföring
 							<br />
+							Tags <br />
+							
 						</p>
 					</div>
 				</div>

@@ -8,19 +8,21 @@
     align-items: center;
 }
 
-.sparade-jobb-image {
+/* .sparade-jobb-image {
     height: 60px;
     width: 60px;
     border-radius: 50%;
-}
+} */
 
 .sparade-jobb-beskrivning {
     width: 200px;
-    margin: 10px;
+    margin: 10px 0;
 }
 
 .ta-bort-jobb {
+    cursor: pointer;
     font-size: 20px;
+    margin-left: auto;
 }
 
 .employer-name {
@@ -29,7 +31,7 @@
 
 .button-container {
     text-align: center;
-    margin: 20px;
+    margin: 12px;
 }
 
 .button {
@@ -43,6 +45,6 @@
 
 .underline {
     background-color: #721904;
-    margin: 10px;
+    margin: 12px 0;
     
 }
