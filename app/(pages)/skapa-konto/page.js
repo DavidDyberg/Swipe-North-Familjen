@@ -6,7 +6,6 @@ import facebook from '../../../public/facebook.webp'
 
 export default function SkapaKonto() {
 	return (
-		<main>
 			<div className={styles['login-card']}>
 				<h1>Skapa konto</h1>
 
@@ -74,6 +73,5 @@ export default function SkapaKonto() {
 					</div>
 				</div>
 			</div>
-		</main>
 	)
 }
