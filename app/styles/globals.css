@@ -18,13 +18,13 @@
 }
 
 html {
-	/* height: 100vh; */
-	height: 100svh;
+	height: 100vh;
 
 }
 
 main {
 	padding: 0 24px;
+	height: 100svh;
 }
 
 body {
