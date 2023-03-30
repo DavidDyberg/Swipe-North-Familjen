@@ -23,7 +23,7 @@ export default function Navbar() {
 				</Link>
 				<ul className={`navMenu ${isOpen ? 'active' : ''}`}>
 					<li className="navItem">
-						<Link href="../swipe-north">
+						<Link href="../swipe-test">
 							<span onClick={closeMenu} className="navLink">
 								Hitta jobb
 							</span>
@@ -37,7 +37,7 @@ export default function Navbar() {
 						</Link>
 					</li>
 					<li className="navItem">
-						<Link href="../sparade-jobb">
+						<Link href="../matched-jobs-test">
 							<span onClick={closeMenu} className="navLink">
 								Sparade jobb
 							</span>

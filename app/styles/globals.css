@@ -43,7 +43,7 @@ body {
 }
 
 .button {
-	background-color: var(--mustard-dark);
+	background-color: var(--red-light);
 	border-radius: 25px;
 	border-style: none;
 	color: var(--white);
@@ -57,7 +57,7 @@ body {
 }
 
 .button:hover {
-	background-color: var(--mustard-light);
+	background-color: var(--red-dark);
 }
 
 .button > a,
@@ -113,7 +113,24 @@ body {
 }
 
 div.text-card.saved-jobs {
-	height: unset;
 	justify-content: flex-start;
 	margin-bottom: 24px;
+}
+
+.displayNone {
+	display: none;
+}
+
+.centeredText {
+	text-align: center;
+}
+
+.text-card > button.removeAll {
+	background-color: var(--white);
+	border-color: var(--black);
+	border-style: solid;
+	border-width: 2px;
+	color: var(--black);
+	margin-top: 0;
+	margin-bottom: 36px;
 }

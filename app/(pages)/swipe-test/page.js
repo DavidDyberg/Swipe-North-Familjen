@@ -90,7 +90,6 @@ function swipeNorthApp() {
 
 	function swipeDown() {
 		setJobId('')
-		//localStorage.clear()
 
 		if (data) {
 			const notInterestedId = { notInterestedId: data.hits[number].id }
