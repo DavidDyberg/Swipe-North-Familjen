@@ -1,6 +1,7 @@
 'use client'
 import styles from '../../styles/sparadejobb.module.css'
 import { useState, useEffect } from 'react'
+import Link from 'next/link'
 
 function SavedJobs() {
 	let [savedIds, setSavedIds] = useState([])
@@ -72,7 +73,16 @@ function SavedJobs() {
             </div>
 
             <div className={styles['button-container']}>
-                <button className='button'>ANSÖK NU</button>
+
+				<Link href={job.link}>
+					<button className='button'>
+						ANSÖK NU
+					</button>
+				</Link>
+
+
+				
+                {/* <button className='button'>ANSÖK NU</button> */}
             </div>
         </div>
     ))

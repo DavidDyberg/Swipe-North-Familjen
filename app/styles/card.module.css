@@ -17,7 +17,6 @@
 	flex-direction: column;
 	height: calc(98vh - 98px);
 	line-height: 1.3;
-	margin: 0 24px 24px 24px;
 	max-width: var(--card-width);
 	position: relative;
 }
@@ -99,6 +98,7 @@
 .annonsKnapp {
 	background-color: var(--red-light);
 	color: var(--white);
+	cursor: pointer;
 	font-weight: 700;
 	height: 48px;
 	border-radius: 0 0 4px 4px;

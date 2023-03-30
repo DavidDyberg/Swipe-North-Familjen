@@ -17,6 +17,8 @@ function swipeNorthApp() {
 	const [number, setNumber] = useState(0)
 	const [jobId, setJobId] = useState('')
 	const [dataArray, setDataArray] = useState('')
+	const delay = 500
+	let timerId
 
 	useEffect(() => {
 		setIsLoading(true)
@@ -69,6 +71,7 @@ function swipeNorthApp() {
 				id: data.hits[number].id,
 				headline: data.hits[number].headline,
 				employerName: data.hits[number].employer.name,
+				link: data.hits[number].source_links[0].url,
 			}
 
 			const savedIds = JSON.parse(localStorage.getItem('savedIds')) || []
@@ -122,18 +125,40 @@ function swipeNorthApp() {
 	}
 
 	const onSwipe = (direction) => {
+		swipeHandler(direction)
+
+		// if (direction === 'up') {
+		// 	swipeHandler()
+		// } else if (direction === 'down') {
+		// 	swipeDown()
+		// 	next()
+		// } else if (direction === 'left') {
+		// 	next()
+		// } else if (direction === 'right') {
+		// 	back()
+		// }
+		// console.log('You swiped: ' + direction)
+	}
+
+	function swipeHandler(direction) {
 		if (direction === 'up') {
 			swipeNorth()
-			setNumber(0)
 		} else if (direction === 'down') {
 			swipeDown()
-			next()
 		} else if (direction === 'left') {
 			next()
 		} else if (direction === 'right') {
 			back()
 		}
 		console.log('You swiped: ' + direction)
+
+		if (timerId) {
+		clearTimeout(timerId);
+		}
+		timerId = setTimeout(() => {
+		swipeNorth()
+		timerId = null
+		}, delay)
 	}
 
 	return (

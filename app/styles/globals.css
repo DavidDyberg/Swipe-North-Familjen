@@ -25,6 +25,7 @@ body {
 	flex-direction: column;
 	margin: 0;
 	min-height: 100vh;
+	padding: 0 24px;
 }
 
 * {
@@ -115,7 +116,8 @@ body {
 div.text-card.saved-jobs {
 	height: unset;
 	justify-content: flex-start;
-	margin-bottom: 48px;
+	margin: 0 auto 48px auto;
+	padding-bottom: 48px;
 }
 
 .displayNone {
