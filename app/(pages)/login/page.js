@@ -7,9 +7,8 @@ import facebook from '../../../public/facebook.webp'
 
 export default function Login() {
 	return (
-		<main>
-			<div className='text-card'>
-				<h1>Logga in</h1>
+			<div className={styles.textCard}>
+				<h1 className={styles.logg}>Logga in</h1>
 
 				<div className={styles['form-container']}>
 					<form>
@@ -69,6 +68,5 @@ export default function Login() {
 					</div>
 				</div>
 			</div>
-		</main>
 	)
 }
