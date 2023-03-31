@@ -11,7 +11,7 @@
 	padding: 0 24px;
 	/* margin: 0 24px; */
 	max-width: var(--card-width);
-	min-height: 70vh;
+	min-height: 60vh;
 }
 
 .logg {

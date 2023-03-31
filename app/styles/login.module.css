@@ -11,6 +11,7 @@
 	padding: 0 24px;
 	/* margin: 0 24px; */
 	max-width: var(--card-width);
+	height: 75vh;
 }
 
 .login-card > h1 {
@@ -41,7 +42,7 @@
 		/* padding: 0 24px;
 		margin: 0 24px; */
 		max-width: var(--card-width);
-		/* height: 70vh; */
+		 height: 70vh; 
 }
 
 .login-form {
