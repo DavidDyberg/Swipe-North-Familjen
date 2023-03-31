@@ -57,11 +57,11 @@ function swipeNorthApp() {
 	// }
 
 	function back() {
-		setNumber((prevNumber) => (prevNumber != 0 ? prevNumber - 1 : 19))
+		setNumber((prevNumber) => (prevNumber != 0 ? prevNumber - 1 : dataArray.length - 1))
 	}
 
 	function next() {
-		setNumber((prevNumber) => (prevNumber < 19 ? prevNumber + 1 : 0))
+		setNumber((prevNumber) => (prevNumber < dataArray.length - 1 ? prevNumber + 1 : 0))
 	}
 
 	function swipeNorth() {
@@ -187,7 +187,10 @@ function swipeNorthApp() {
 										</h2>
 									</div>
 
-									{imgArr[jobAdvert.id.match(/[0-9]/)]}
+									{/* {imgArr[jobAdvert.id.match(/[0-9]/)]}
+									<button className={card.lasMer}>
+										Läs mer
+									</button> */}
 
 									<div className={card.briefContainer}>
 										<div className={card.brief}>
@@ -200,41 +203,7 @@ function swipeNorthApp() {
 											ÖPPNA ANNONS
 										</button>
 									</Link>
-									{/* <div className={card.headlineContainer}>
-										<h1 className={card.headline}>
-											{jobAdvert.headline}
-										</h1>
-									</div>
-										<h2 className={card.employer}>
-											{jobAdvert.employer.name}
-										</h2>
-										{
-											imgArr[
-												data.hits[number].id.match(
-													/[0-9]/
-												)
-											]
-										}
-										<div className={card.brief}>
-											{data.hits[number].brief}
-										</div>
-										<div className="pressable">
-											<Link
-												href={
-													data.hits[number]
-														.source_links[0].url
-												}
-											>
-												<button
-													className={card.annonsKnapp}
-												>
-													ÖPPNA ANNONS
-												</button>
-											</Link>
-										</div> */}
-									
 
-									
 								</div>
 							</div>
 						</TinderCard>

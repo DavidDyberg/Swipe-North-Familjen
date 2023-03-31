@@ -113,3 +113,7 @@
 	display: flex;
 	position: unset;
 }
+
+.lasMer {
+	margin: 12px;
+}
