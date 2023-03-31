@@ -187,8 +187,8 @@ function swipeNorthApp() {
 										</h2>
 									</div>
 
-									{/* {imgArr[jobAdvert.id.match(/[0-9]/)]}
-									<button className={card.lasMer}>
+									{imgArr[jobAdvert.id.match(/[0-9]/)]}
+									{/* <button className={card.lasMer}>
 										Läs mer
 									</button> */}
 

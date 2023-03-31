@@ -20,7 +20,6 @@
 	line-height: 1.3;
 	max-width: var(--card-width);
 	position: relative;
-	height: 70vh;
 }
 
 .card,
@@ -98,8 +97,8 @@
 }
 
 .annonsKnapp {
-	background: linear-gradient(to right, #721804b3, #8b351fb2);
-	/* background-color: var(--red-light); */
+	/* background: linear-gradient(to right, #721804b3, #8b351fb2); */
+	background-color: var(--red-light);
 	color: var(--white);
 	cursor: pointer;
 	font-weight: 700;
