@@ -32,6 +32,8 @@
 .button-container {
     text-align: center;
     margin: 12px;
+    background: linear-gradient(to right, #721804b3, #8b351fb2);
+
 }
 
 .button {
