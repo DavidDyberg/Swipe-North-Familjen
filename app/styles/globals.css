@@ -51,7 +51,8 @@ body {
 }
 
 .button {
-	background-color: var(--red-light);
+	/* background-color: var(--red-light); */
+	background: linear-gradient(to right, #721804b3, #8b351fb2);
 	border-radius: 8px;
 	border-style: none;
 	color: var(--white);
