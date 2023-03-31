@@ -12,14 +12,14 @@ export const metadata = {
 	icons: {
 		icon: './favicon-32x32.png',
 	},
+	"appleMobileWebAppCapable": "yes",
+	
 }
 
 export default function RootLayout({ children }) {
 	return (
 		<html lang="en">
-<Head>
-<meta name="apple-mobile-web-app-capable" content="yes" />
-</Head>
+
 			<body className={inter.className}>{children}</body>
 		</html>
 	)
