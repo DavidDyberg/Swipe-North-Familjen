@@ -2,9 +2,7 @@
 	background-color: #fff;
 	display: flex;
 	flex-direction: column;
-	/* height: calc(98vh - 98px); */
-	height: calc(92vh - 99px);
-
+	height: calc(98vh - 98px);
 	line-height: 1.3;
 	/* margin: 0 24px 24px 24px; */
 	max-width: var(--card-width);
