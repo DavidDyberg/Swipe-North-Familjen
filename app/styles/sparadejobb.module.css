@@ -32,15 +32,14 @@
 .button-container {
     text-align: center;
     margin: 12px;
-    background: linear-gradient(to right, #721804b3, #8b351fb2);
-
 }
 
 .button {
     border-radius: 8px;
     border: none;
     color: white;
-    background-color: #721804bb;
+    /* background-color: #721804bb; */
+    background: linear-gradient(to right, #721804b3, #8b351fb2);
     width: 180px;
     height: 30px;
 }
