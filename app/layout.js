@@ -17,7 +17,7 @@ export const metadata = {
 		appArgument: 'myAppArgument',
 	  },
 	appleWebApp: {
-		title: 'Apple Web App',
+		title: 'Swipe North',
 		statusBarStyle: 'black-translucent',
 		startupImage: [
 		  '/assets/startup/apple-touch-startup-image-768x1004.png',

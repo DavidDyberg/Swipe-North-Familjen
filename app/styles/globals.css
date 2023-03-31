@@ -136,10 +136,11 @@ div.text-card.saved-jobs {
 
 .text-card > button.removeAll {
 	background-color: var(--white);
-	border-color: var(--black);
+	/* border-color: var(--black); */
+	border: none; 
 	border-style: solid;
 	border-width: 2px;
-	color: var(--black);
+	color: var(--white);
 	margin-top: 0;
 	margin-bottom: 36px;
 }
