@@ -7,7 +7,7 @@ import Head from 'next/head'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-	"appleMobileWebAppCapable": "yes",
+	appleMobileWebAppCapable: "yes",
 	title: 'Swipe North',
 	description: 'Hitta ditt nya drömjobb i Skellefteå',
 	icons: {
