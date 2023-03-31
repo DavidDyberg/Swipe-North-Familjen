@@ -12,6 +12,10 @@ export const metadata = {
 	icons: {
 		icon: './favicon-32x32.png',
 	},	
+	itunes: {
+		appId: 'myAppStoreID',
+		appArgument: 'myAppArgument',
+	  },
 	appleWebApp: {
 		title: 'Apple Web App',
 		statusBarStyle: 'black-translucent',
