@@ -62,16 +62,19 @@ function swipeNorthApp() {
 	// }
 
 	function back() {
-		setNumber((prevNumber) =>
-			prevNumber != 0 ? prevNumber - 1 : data.hits.length - 1
-		)
+		setNumber((prevNumber) => (prevNumber != 0 ? prevNumber - 1 : data.hits.length - 1))
 	}
 
 	function next() {
-		setNumber((prevNumber) => (prevNumber < data.hits.length - 1 ? prevNumber + 1 : 0))
-	}
-
-	}
+		const savedNotInterestedIds = JSON.parse(localStorage.getItem('savedNotInterestedIds')) || [];
+		
+		if (data) {
+			if (savedNotInterestedIds.includes(data.hits[number + 1].id)) {
+				setNumber((prevNumber) => (prevNumber < data.hits.length - 1 ? prevNumber + 2 : 0))
+			}
+		} else {
+			setNumber((prevNumber) => (prevNumber < data.hits.length - 1 ? prevNumber + 1 : 0))
+		}
 
 	}
 
@@ -158,15 +161,6 @@ function swipeNorthApp() {
 
 	function reloadTinderSwipe() {
 		setKey(key + 1);
-
-		if (timerId) {
-			clearTimeout(timerId)
-		}
-		timerId = setTimeout(() => {
-			setActiveJob('activeJob')
-			//swipeNorth()
-			timerId = null
-		}, delay)
 	}
 
 	// function swipeHandler(direction) {
@@ -198,20 +192,17 @@ function swipeNorthApp() {
 	return (
 		
 			<div>
-				{
-					data && (
-						// dataArray.map((jobAdvert, index) => (
+				{data &&
+					// dataArray.map((jobAdvert, index) => (
 						<TinderCard onSwipe={onSwipe} key={key}>
 							<div
-							// className={
-							// 	index === number
-							// 		? `${card.container} ${card.active}`
-							// 		: card.container
-							// }
+								// className={
+								// 	index === number
+								// 		? `${card.container} ${card.active}`
+								// 		: card.container
+								// }
 							>
-								<div
-									className={`shadow ${card.card} ${activeJob}`}
-								>
+								<div className={`shadow ${card.card} ${activeJob}`}>
 									<div className={card.headlineContainer}>
 										<h1 className={card.headline}>
 											{data.hits[number].headline}
@@ -224,11 +215,7 @@ function swipeNorthApp() {
 										</h2>
 									</div>
 
-									{
-										imgArr[
-											data.hits[number].id.match(/[0-9]/)
-										]
-									}
+									{imgArr[data.hits[number].id.match(/[0-9]/)]}
 									{/* <button className={card.lasMer}>
 										Läs mer
 									</button> */}
@@ -239,22 +226,18 @@ function swipeNorthApp() {
 										</div>
 									</div>
 
-									<Link
-										href={
-											data.hits[number].source_links[0]
-												.url
-										}
-									>
+									<Link href={data.hits[number].source_links[0].url}>
 										<button className={card.annonsKnapp}>
 											ÖPPNA ANNONS
 										</button>
 									</Link>
+
 								</div>
 							</div>
+
 						</TinderCard>
-					)
 					// ))
-				}
+					}
 			</div>
 		
 	)
