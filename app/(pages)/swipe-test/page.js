@@ -6,6 +6,8 @@ import Link from 'next/link'
 import imgArr from './imgArray.js'
 import dynamic from 'next/dynamic'
 
+import Pop from '../../components/popup'
+
 const TinderCard = dynamic(() => import('react-tinder-card'), {
 	ssr: false,
 })
@@ -57,11 +59,15 @@ function swipeNorthApp() {
 	// }
 
 	function back() {
-		setNumber((prevNumber) => (prevNumber != 0 ? prevNumber - 1 : dataArray.length - 1))
+		setNumber((prevNumber) =>
+			prevNumber != 0 ? prevNumber - 1 : dataArray.length - 1
+		)
 	}
 
 	function next() {
-		setNumber((prevNumber) => (prevNumber < dataArray.length - 1 ? prevNumber + 1 : 0))
+		setNumber((prevNumber) =>
+			prevNumber < dataArray.length - 1 ? prevNumber + 1 : 0
+		)
 	}
 
 	function swipeNorth() {
@@ -153,11 +159,11 @@ function swipeNorthApp() {
 		console.log('You swiped: ' + direction)
 
 		if (timerId) {
-		clearTimeout(timerId);
+			clearTimeout(timerId)
 		}
 		timerId = setTimeout(() => {
-		swipeNorth()
-		timerId = null
+			swipeNorth()
+			timerId = null
 		}, delay)
 	}
 
@@ -175,7 +181,7 @@ function swipeNorthApp() {
 								}
 							>
 								<div className={`shadow ${card.card}`}>
-								<div className={card.headlineContainer}>
+									<div className={card.headlineContainer}>
 										<h1 className={card.headline}>
 											{jobAdvert.headline}
 										</h1>
@@ -203,12 +209,12 @@ function swipeNorthApp() {
 											ÖPPNA ANNONS
 										</button>
 									</Link>
-
 								</div>
 							</div>
 						</TinderCard>
 					))}
 			</div>
+			<Pop />
 		</>
 	)
 }

@@ -19,7 +19,6 @@
 
 html {
 	height: 100vh;
-
 }
 
 main {
@@ -27,11 +26,11 @@ main {
 }
 
 body {
-	background: var(--primary-bg); 
+	background: var(--primary-bg);
 	display: flex;
 	flex-direction: column;
 	margin: 0;
-	min-height: 100vh; 
+	min-height: 100vh;
 }
 
 * {
@@ -129,7 +128,7 @@ div.text-card.saved-jobs {
 
 .text-card > button.removeAll {
 	background-color: var(--white);
-	border: none; 
+	border: none;
 	border-style: solid;
 	border-width: 2px;
 	color: var(--white);
