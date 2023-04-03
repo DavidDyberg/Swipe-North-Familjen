@@ -16,8 +16,9 @@ function swipeNorthApp() {
 	const [error, setError] = useState(null)
 	const [number, setNumber] = useState(0)
 	const [jobId, setJobId] = useState('')
-	const [dataArray, setDataArray] = useState('')
-	const delay = 500
+	const [activeJob, setActiveJob] = useState('activeJob')
+	// const [dataArray, setDataArray] = useState('')
+	const delay = 2000
 	let timerId
 
 	useEffect(() => {
@@ -29,7 +30,7 @@ function swipeNorthApp() {
 				)
 				const data = await response.json()
 				setData(data)
-				setDataArray(data.hits)
+				// setDataArray(data.hits)
 			} catch (error) {
 				setError(error)
 			} finally {
@@ -57,11 +58,11 @@ function swipeNorthApp() {
 	// }
 
 	function back() {
-		setNumber((prevNumber) => (prevNumber != 0 ? prevNumber - 1 : dataArray.length - 1))
+		setNumber((prevNumber) => (prevNumber != 0 ? prevNumber - 1 : data.hits.length - 1))
 	}
 
 	function next() {
-		setNumber((prevNumber) => (prevNumber < dataArray.length - 1 ? prevNumber + 1 : 0))
+		setNumber((prevNumber) => (prevNumber < data.hits.length - 1 ? prevNumber + 1 : 0))
 	}
 
 	function swipeNorth() {
@@ -141,22 +142,27 @@ function swipeNorthApp() {
 	}
 
 	function swipeHandler(direction) {
+		setActiveJob('')
 		if (direction === 'up') {
 			swipeNorth()
+			next()
 		} else if (direction === 'down') {
 			swipeDown()
+			next()
 		} else if (direction === 'left') {
 			next()
 		} else if (direction === 'right') {
 			back()
 		}
+		setActiveJob('activeJob')
 		console.log('You swiped: ' + direction)
 
 		if (timerId) {
 		clearTimeout(timerId);
 		}
 		timerId = setTimeout(() => {
-		swipeNorth()
+			setActiveJob('activeJob')
+			//swipeNorth()
 		timerId = null
 		}, delay)
 	}
@@ -165,40 +171,40 @@ function swipeNorthApp() {
 		<>
 			<div>
 				{data &&
-					dataArray.map((jobAdvert, index) => (
-						<TinderCard onSwipe={onSwipe} key={jobAdvert.id}>
+					// dataArray.map((jobAdvert, index) => (
+						<TinderCard onSwipe={onSwipe}>
 							<div
-								className={
-									index === number
-										? `${card.container} ${card.active}`
-										: card.container
-								}
+								// className={
+								// 	index === number
+								// 		? `${card.container} ${card.active}`
+								// 		: card.container
+								// }
 							>
-								<div className={`shadow ${card.card}`}>
-								<div className={card.headlineContainer}>
+								<div className={`shadow ${card.card} ${activeJob}`}>
+									<div className={card.headlineContainer}>
 										<h1 className={card.headline}>
-											{jobAdvert.headline}
+											{data.hits[number].headline}
 										</h1>
 									</div>
 
 									<div className={card.employerContainer}>
 										<h2 className={card.employer}>
-											{jobAdvert.employer.name}
+											{data.hits[number].employer.name}
 										</h2>
 									</div>
 
-									{imgArr[jobAdvert.id.match(/[0-9]/)]}
+									{imgArr[data.hits[number].id.match(/[0-9]/)]}
 									{/* <button className={card.lasMer}>
 										Läs mer
 									</button> */}
 
 									<div className={card.briefContainer}>
 										<div className={card.brief}>
-											{jobAdvert.brief}
+											{data.hits[number].brief}
 										</div>
 									</div>
 
-									<Link href={jobAdvert.source_links[0].url}>
+									<Link href={data.hits[number].source_links[0].url}>
 										<button className={card.annonsKnapp}>
 											ÖPPNA ANNONS
 										</button>
@@ -206,8 +212,10 @@ function swipeNorthApp() {
 
 								</div>
 							</div>
+
 						</TinderCard>
-					))}
+					// ))
+					}
 			</div>
 		</>
 	)
