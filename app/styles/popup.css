@@ -3,33 +3,44 @@
     height: 300px;
   }
   
-  button {
+  .popBtn {
     background: transparent;
     border: none; 
   }
-  
-  body {
-    background-color: bisque;
+
+  .help {
+    width: 30px;
+    height: 30px;
   }
   
   .popup {
-    background-color: transparent;
+    background: transparent;
     width: 300px;
     height: 300px;
   }
   
   .pop {
     display: flex; 
-    margin-top: 350px;
+    position: absolute;
+    z-index: 100;
+    bottom: 32px;
+
   }
   
-  #popup-1.popup-content {
+  /* #popup-1.popup-content {
     background: transparent;
     border: 3px solid #fff;
     width: 300px;
     height: 300px;
-  }
+  } */
   
+  #popup-2.popup-content {
+    /* background: transparent; */
+    background: linear-gradient(to right, #721804b3, #8b351fb2);
+    border: 3px solid #fff;
+    width: 325px;
+    height: 350px;
+  }
   
   
   

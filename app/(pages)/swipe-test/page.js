@@ -6,6 +6,8 @@ import Link from 'next/link'
 import imgArr from './imgArray.js'
 import dynamic from 'next/dynamic'
 
+import Pop from '../../components/popup'
+
 const TinderCard = dynamic(() => import('react-tinder-card'), {
 	ssr: false,
 })
@@ -209,6 +211,7 @@ function swipeNorthApp() {
 						</TinderCard>
 					))}
 			</div>
+			<Pop />
 		</>
 	)
 }
