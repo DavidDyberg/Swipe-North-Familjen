@@ -14,9 +14,9 @@
 	flex-direction: column;
 	height: calc(98vh - 98px);
 	line-height: 1.3;
+	margin: 0 auto;
 	max-width: var(--card-width);
 	position: relative;
-	
 }
 
 .card,

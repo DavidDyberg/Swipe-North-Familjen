@@ -10,6 +10,7 @@ const TinderCard = dynamic(() => import('react-tinder-card'), {
 	ssr: false,
 })
 
+
 function swipeNorthApp() {
 	const [data, setData] = useState(null)
 	const [isLoading, setIsLoading] = useState(false)
@@ -17,16 +18,19 @@ function swipeNorthApp() {
 	const [number, setNumber] = useState(0)
 	const [jobId, setJobId] = useState('')
 	const [activeJob, setActiveJob] = useState('activeJob')
+	const [key, setKey] = useState(0)
+
+	// let savedNotInterestedIds = ''
 	// const [dataArray, setDataArray] = useState('')
-	const delay = 2000
-	let timerId
+	// const delay = 2000
+	// let timerId
 
 	useEffect(() => {
 		setIsLoading(true)
 		async function fetchData() {
 			try {
 				const response = await fetch(
-					`https://links.api.jobtechdev.se/joblinks?municipality=kicB_LgH_2Dk&limit=20${jobId}`
+					`https://links.api.jobtechdev.se/joblinks?municipality=kicB_LgH_2Dk&limit=100${jobId}`
 				)
 				const data = await response.json()
 				setData(data)
@@ -62,7 +66,16 @@ function swipeNorthApp() {
 	}
 
 	function next() {
-		setNumber((prevNumber) => (prevNumber < data.hits.length - 1 ? prevNumber + 1 : 0))
+		const savedNotInterestedIds = JSON.parse(localStorage.getItem('savedNotInterestedIds')) || [];
+		
+		if (data) {
+			if (savedNotInterestedIds.includes(data.hits[number + 1].id)) {
+				setNumber((prevNumber) => (prevNumber < data.hits.length - 1 ? prevNumber + 2 : 0))
+			}
+		} else {
+			setNumber((prevNumber) => (prevNumber < data.hits.length - 1 ? prevNumber + 1 : 0))
+		}
+
 	}
 
 	function swipeNorth() {
@@ -93,12 +106,12 @@ function swipeNorthApp() {
 	}
 
 	function swipeDown() {
-		setJobId('')
+		// setJobId('')
 
 		if (data) {
 			const notInterestedId = { notInterestedId: data.hits[number].id }
 
-			const savedNotInterestedIds =
+			let savedNotInterestedIds =
 				JSON.parse(localStorage.getItem('savedNotInterestedIds')) || []
 
 			// Check if notInterestedId already exists in savedNotInterestedIds
@@ -126,23 +139,9 @@ function swipeNorthApp() {
 	}
 
 	const onSwipe = (direction) => {
-		swipeHandler(direction)
+		// swipeHandler(direction)
+		console.log(number)
 
-		// if (direction === 'up') {
-		// 	swipeHandler()
-		// } else if (direction === 'down') {
-		// 	swipeDown()
-		// 	next()
-		// } else if (direction === 'left') {
-		// 	next()
-		// } else if (direction === 'right') {
-		// 	back()
-		// }
-		// console.log('You swiped: ' + direction)
-	}
-
-	function swipeHandler(direction) {
-		setActiveJob('')
 		if (direction === 'up') {
 			swipeNorth()
 			next()
@@ -154,25 +153,48 @@ function swipeNorthApp() {
 		} else if (direction === 'right') {
 			back()
 		}
-		setActiveJob('activeJob')
 		console.log('You swiped: ' + direction)
-
-		if (timerId) {
-		clearTimeout(timerId);
-		}
-		timerId = setTimeout(() => {
-			setActiveJob('activeJob')
-			//swipeNorth()
-		timerId = null
-		}, delay)
+		console.log(number)
+		// reloadTinderSwipe()
+		console.log(number)
 	}
 
+	function reloadTinderSwipe() {
+		setKey(key + 1);
+	}
+
+	// function swipeHandler(direction) {
+	// 	setActiveJob('')
+	// 	if (direction === 'up') {
+	// 		swipeNorth()
+	// 		next()
+	// 	} else if (direction === 'down') {
+	// 		swipeDown()
+	// 		next()
+	// 	} else if (direction === 'left') {
+	// 		next()
+	// 	} else if (direction === 'right') {
+	// 		back()
+	// 	}
+	// 	// setActiveJob('activeJob')
+	// 	console.log('You swiped: ' + direction)
+
+	// 	if (timerId) {
+	// 	clearTimeout(timerId);
+	// 	}
+	// 	timerId = setTimeout(() => {
+	// 		setActiveJob('activeJob')
+	// 		//swipeNorth()
+	// 	timerId = null
+	// 	}, delay)
+	// }
+
 	return (
-		<>
+		
 			<div>
 				{data &&
 					// dataArray.map((jobAdvert, index) => (
-						<TinderCard onSwipe={onSwipe}>
+						<TinderCard onSwipe={onSwipe} key={key}>
 							<div
 								// className={
 								// 	index === number
@@ -217,7 +239,7 @@ function swipeNorthApp() {
 					// ))
 					}
 			</div>
-		</>
+		
 	)
 }
 
