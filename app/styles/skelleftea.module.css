@@ -1,5 +1,5 @@
 .textCard {
-    background: #fff; /* fallback for older browsers */
+	background: #fff; /* fallback for older browsers */
 	border-color: var(--red-light);
 	border-radius: 8px;
 	border-style: solid;
@@ -14,5 +14,5 @@
 }
 
 .logg {
-    text-align: center;
+	text-align: center;
 }

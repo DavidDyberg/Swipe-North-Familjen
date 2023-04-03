@@ -1,44 +1,43 @@
 .h1 {
-    text-align: center;
-    margin-bottom: 30px;
+	text-align: center;
+	margin-bottom: 30px;
 }
 
 .sparade-jobb-container {
-    display: flex;
-    align-items: center;
+	display: flex;
+	align-items: center;
 }
 
 .sparade-jobb-beskrivning {
-    width: 200px;
-    margin: 10px 0;
+	width: 200px;
+	margin: 10px 0;
 }
 
 .ta-bort-jobb {
-    cursor: pointer;
-    font-size: 20px;
-    margin-left: auto;
+	cursor: pointer;
+	font-size: 20px;
+	margin-left: auto;
 }
 
 .employer-name {
-    color: gray;
+	color: gray;
 }
 
 .button-container {
-    text-align: center;
-    margin: 12px;
+	text-align: center;
+	margin: 12px;
 }
 
 .button {
-    border-radius: 8px;
-    border: none;
-    color: white;
-    background-color: #721804bb;
-    width: 180px;
-    height: 30px;
+	border-radius: 8px;
+	border: none;
+	color: white;
+	background-color: #721804bb;
+	width: 180px;
+	height: 30px;
 }
 
 .underline {
-    background-color: #721904;
-    margin: 12px 0;
-    
+	background-color: #721904;
+	margin: 12px 0;
 }
