@@ -14,16 +14,6 @@
 	align-items: center;
 }
 
-.arrows-container {
-	text-align: center;
-	margin-top: -60px;
-}
-
-.arrowimage {
-	width: 350px;
-	height: 350px;
-}
-
 .swipebutton {
 	background: linear-gradient(to right, #721804b3, #8b351fb2);
 	border-radius: 25px;
@@ -75,14 +65,4 @@
 
 .loggaIn {
 	bottom: 80px;
-}
-
-.icon-container {
-	text-align: center;
-}
-
-.icon {
-	height: 30px;
-	width: 30px;
-	margin: 5px;
 }

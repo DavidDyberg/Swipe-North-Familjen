@@ -1,35 +1,37 @@
 .pil {
-    width: 300px;
-    height: 300px;
-  }
-  
-  button {
-    background: transparent;
-    border: none; 
-  }
-  
-  body {
-    background-color: bisque;
-  }
-  
-  .popup {
-    background-color: transparent;
-    width: 300px;
-    height: 300px;
-  }
-  
-  .pop {
-    display: flex; 
-    margin-top: 350px;
-  }
-  
-  #popup-1.popup-content {
-    background: transparent;
-    border: 3px solid #fff;
-    width: 300px;
-    height: 300px;
-  }
-  
-  
-  
-  
+	width: 300px;
+	height: 300px;
+}
+
+.popBtn {
+	background: transparent;
+	border: none;
+}
+
+.help {
+	width: 30px;
+	height: 30px;
+}
+
+.popup {
+	background: transparent;
+	width: 300px;
+	height: 300px;
+}
+
+.pop {
+	display: flex;
+	position: absolute;
+	z-index: 100;
+	bottom: 32px;
+}
+
+#popup-2.popup-content {
+	/* background: transparent; */
+	background: linear-gradient(to right, #721804b3, #8b351fb2);
+	border: 3px solid #fff;
+	width: 314px;
+	height: 325px;
+	right: 23px;
+	bottom: 62px;
+}

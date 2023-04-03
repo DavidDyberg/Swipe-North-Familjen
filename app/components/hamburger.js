@@ -15,9 +15,13 @@ export default function Navbar() {
 	return (
 		<div className="container">
 			<nav className="navbar">
-					<Image src={Ske} className="Ske"></Image>
+				<Image src={Ske} className="Ske" alt="Skellefteå logga"></Image>
 				<Link href="/">
-					<Image src={Logga} className="Logga"></Image>
+					<Image
+						src={Logga}
+						className="Logga"
+						alt="Swipe North logga"
+					></Image>
 				</Link>
 				<ul className={`navMenu ${isOpen ? 'active' : ''}`}>
 					<li className="navItem">
