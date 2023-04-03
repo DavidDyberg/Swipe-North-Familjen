@@ -9,18 +9,20 @@ export default function Profile() {
 		<>
 			<div className={`shadow ${profile.container}`}>
 				<div className={profile.profileCard}>
-					<Image className={profile.personImg} src={personImg} />
+					<Image className={profile.personImg} src={personImg} alt='Profilbild' />
 					<div className={profile.textContainer}>
 					    <h4>Sara Larsson</h4>
 						<p>
 						 25år, Stockholm
 						<br />
 						<Image className={profile.mail}
-							src={mail} />
+							src={mail}
+							alt='Mailsymbol' />
 						       &nbsp; SaraLarsson@gmail.com
 							   <br />
 							<Image className={profile.user}
-							src={user} />
+							src={user}
+							alt='Profilsymbol' />
 							  &nbsp; SaraLarsson25
 							<br />
 							<br />

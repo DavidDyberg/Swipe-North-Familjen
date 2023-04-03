@@ -3,7 +3,7 @@ import { Inter } from 'next/font/google'
 import styles from './styles/startsida.module.css'
 import './styles/hideOverflow.css'
 import Link from 'next/link'
-import photo from '../public/swipe-north-logga-vit.png'
+import logga from '../public/swipe-north-logga-vit.png'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -13,7 +13,7 @@ export default function Startsida() {
 			<div className={styles['logga-container']}>
 				<Image
 					className={styles['swipe-north-logga']}
-					src={photo}
+					src={logga}
 				></Image>
 
 				<Link href="/swipe-test">

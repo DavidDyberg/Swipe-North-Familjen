@@ -51,6 +51,7 @@ export default function SkapaKonto() {
 							<Image
 								className={styles['social-media-icon']}
 								src={linkedin}
+								alt='Logga för Linkedin'
 							></Image>
 							Skapa konto med Linkedin
 						</button>
@@ -59,6 +60,7 @@ export default function SkapaKonto() {
 							<Image
 								className={styles['social-media-icon']}
 								src={google}
+								alt='Logga för Google'
 							></Image>
 							Skapa konto med Google
 						</button>
@@ -67,6 +69,7 @@ export default function SkapaKonto() {
 							<Image
 								className={styles['social-media-icon']}
 								src={facebook}
+								alt='Logga för Facebook'
 							></Image>
 							Skapa konto med Facebook
 						</button>

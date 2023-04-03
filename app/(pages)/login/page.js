@@ -46,6 +46,7 @@ export default function Login() {
 							<Image
 								className={styles['social-media-icon']}
 								src={linkedin}
+								alt='Logga för Linkedin'
 							></Image>
 							Logga in med Linkedin
 						</button>
@@ -54,6 +55,7 @@ export default function Login() {
 							<Image
 								className={styles['social-media-icon']}
 								src={google}
+								alt='Logga för Google'
 							></Image>
 							Logga in med Google
 						</button>
@@ -62,6 +64,7 @@ export default function Login() {
 							<Image
 								className={styles['social-media-icon']}
 								src={facebook}
+								alt='Logga för Facebook'
 							></Image>
 							Logga in med Facebook
 						</button>
