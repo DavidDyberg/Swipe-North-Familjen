@@ -15,9 +15,7 @@ export default function Navbar() {
 	return (
 		<div className="container">
 			<nav className="navbar">
-				<Link href="https://skelleftea.se/">
 					<Image src={Ske} className="Ske"></Image>
-				</Link>
 				<Link href="/">
 					<Image src={Logga} className="Logga"></Image>
 				</Link>

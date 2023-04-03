@@ -9,10 +9,6 @@
 }
 
 .card {
-	/* background-color: var(--beige-dark); */
-	/* background: #DFB2B9; /* fallback for older browsers */
-	/* background: linear-gradient(to bottom right,  #DFB2B9, #ECD0D5, #9192B0); */
-
 	background-color: #fff;
 	display: flex;
 	flex-direction: column;
@@ -90,25 +86,16 @@
 	margin: 12px;
 	overflow: hidden;
 	text-overflow: ellipsis;
-	/*height: 100%;
-	 display: flex;
-	flex-grow: 1;
-	font-size: 16px;
-	margin-bottom: 12px; */
 }
 
 .annonsKnapp {
-	/* background: linear-gradient(to right, #721804b3, #8b351fb2); */
-	background-color: var(--red-light);
+	background: linear-gradient(to right, #721804b3, #8b351fb2);
 	color: var(--white);
 	cursor: pointer;
 	font-weight: 700;
 	height: 48px;
 	border-radius: 0 0 4px 4px;
 	width: 100%;
-
-	/* position: absolute;
-	bottom: 0; */
 }
 
 .active {
