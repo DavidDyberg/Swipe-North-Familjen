@@ -27,19 +27,14 @@
 
   }
   
-  /* #popup-1.popup-content {
-    background: transparent;
-    border: 3px solid #fff;
-    width: 300px;
-    height: 300px;
-  } */
-  
   #popup-2.popup-content {
     /* background: transparent; */
     background: linear-gradient(to right, #721804b3, #8b351fb2);
     border: 3px solid #fff;
-    width: 325px;
-    height: 350px;
+    width: 314px;
+    height: 325px;
+    right: 23px;
+    bottom: 62px;
   }
   
   
