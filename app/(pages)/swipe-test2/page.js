@@ -10,7 +10,6 @@ const TinderCard = dynamic(() => import('react-tinder-card'), {
 	ssr: false,
 })
 
-
 function swipeNorthApp() {
 	const [data, setData] = useState(null)
 	const [isLoading, setIsLoading] = useState(false)
@@ -62,20 +61,26 @@ function swipeNorthApp() {
 	// }
 
 	function back() {
-		setNumber((prevNumber) => (prevNumber != 0 ? prevNumber - 1 : data.hits.length - 1))
+		setNumber((prevNumber) =>
+			prevNumber != 0 ? prevNumber - 1 : data.hits.length - 1
+		)
 	}
 
 	function next() {
-		const savedNotInterestedIds = JSON.parse(localStorage.getItem('savedNotInterestedIds')) || [];
-		
+		const savedNotInterestedIds =
+			JSON.parse(localStorage.getItem('savedNotInterestedIds')) || []
+
 		if (data) {
 			if (savedNotInterestedIds.includes(data.hits[number + 1].id)) {
-				setNumber((prevNumber) => (prevNumber < data.hits.length - 1 ? prevNumber + 2 : 0))
+				setNumber((prevNumber) =>
+					prevNumber < data.hits.length - 1 ? prevNumber + 2 : 0
+				)
 			}
 		} else {
-			setNumber((prevNumber) => (prevNumber < data.hits.length - 1 ? prevNumber + 1 : 0))
+			setNumber((prevNumber) =>
+				prevNumber < data.hits.length - 1 ? prevNumber + 1 : 0
+			)
 		}
-
 	}
 
 	function swipeNorth() {
@@ -160,7 +165,7 @@ function swipeNorthApp() {
 	}
 
 	function reloadTinderSwipe() {
-		setKey(key + 1);
+		setKey(key + 1)
 	}
 
 	// function swipeHandler(direction) {
@@ -190,56 +195,56 @@ function swipeNorthApp() {
 	// }
 
 	return (
-		
-			<div>
-				{data &&
+		<div>
+			{
+				data && (
 					// dataArray.map((jobAdvert, index) => (
-						<TinderCard onSwipe={onSwipe} key={key}>
-							<div
-								// className={
-								// 	index === number
-								// 		? `${card.container} ${card.active}`
-								// 		: card.container
-								// }
-							>
-								<div className={`shadow ${card.card} ${activeJob}`}>
-									<div className={card.headlineContainer}>
-										<h1 className={card.headline}>
-											{data.hits[number].headline}
-										</h1>
-									</div>
+					<TinderCard onSwipe={onSwipe} key={key}>
+						<div
+						// className={
+						// 	index === number
+						// 		? `${card.container} ${card.active}`
+						// 		: card.container
+						// }
+						>
+							<div className={`shadow ${card.card} ${activeJob}`}>
+								<div className={card.headlineContainer}>
+									<h1 className={card.headline}>
+										{data.hits[number].headline}
+									</h1>
+								</div>
 
-									<div className={card.employerContainer}>
-										<h2 className={card.employer}>
-											{data.hits[number].employer.name}
-										</h2>
-									</div>
+								<div className={card.employerContainer}>
+									<h2 className={card.employer}>
+										{data.hits[number].employer.name}
+									</h2>
+								</div>
 
-									{imgArr[data.hits[number].id.match(/[0-9]/)]}
-									{/* <button className={card.lasMer}>
+								{imgArr[data.hits[number].id.match(/[0-9]/)]}
+								{/* <button className={card.lasMer}>
 										Läs mer
 									</button> */}
 
-									<div className={card.briefContainer}>
-										<div className={card.brief}>
-											{data.hits[number].brief}
-										</div>
+								<div className={card.briefContainer}>
+									<div className={card.brief}>
+										{data.hits[number].brief}
 									</div>
-
-									<Link href={data.hits[number].source_links[0].url}>
-										<button className={card.annonsKnapp}>
-											ÖPPNA ANNONS
-										</button>
-									</Link>
-
 								</div>
-							</div>
 
-						</TinderCard>
-					// ))
-					}
-			</div>
-		
+								<Link
+									href={data.hits[number].source_links[0].url}
+								>
+									<button className={card.annonsKnapp}>
+										ÖPPNA ANNONS
+									</button>
+								</Link>
+							</div>
+						</div>
+					</TinderCard>
+				)
+				// ))
+			}
+		</div>
 	)
 }
 
