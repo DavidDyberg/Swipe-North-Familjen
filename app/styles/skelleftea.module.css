@@ -9,7 +9,6 @@
 	height: calc(98vh - 98px);
 	justify-content: center;
 	padding: 0 24px;
-	/* margin: 0 24px; */
 	max-width: var(--card-width);
 	min-height: 60vh;
 }
