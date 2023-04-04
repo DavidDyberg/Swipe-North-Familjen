@@ -18,6 +18,7 @@ function swipeNorthApp() {
 	const [jobId, setJobId] = useState('')
 	const [activeJob, setActiveJob] = useState('activeJob')
 	const [key, setKey] = useState(0)
+	const [isDataLoaded, setIsDataLoaded] = useState(false)
 
 	// let savedNotInterestedIds = ''
 	// const [dataArray, setDataArray] = useState('')
@@ -34,29 +35,41 @@ function swipeNorthApp() {
 				const data = await response.json()
 				setData(data)
 				// setDataArray(data.hits)
+				
 			} catch (error) {
 				setError(error)
 			} finally {
 				setIsLoading(false)
+				setIsDataLoaded(true)
 			}
 		}
 		fetchData()
 	}, [jobId])
+
+	useEffect(() => {
+		if (isDataLoaded) {
+		  console.log(number)
+		  setNumber(data.hits.length - 1)
+		  console.log(number)
+		  next()
+		  console.log(number)
+		}
+	  }, [isDataLoaded, data])
 
 	if (isLoading) {
 		return <h1 className="loading">Vi far norrut ...</h1>
 	}
 
 	if (error) {
-		return <div>Error: {error.message}</div>
-	}
-
-	if (data && number === 0) {
-		console.log(number)
-		setNumber(data.hits.length - 1)
-		console.log(number)
-		next()
-		console.log(number)
+		return (
+			<div className='text-card'>
+				<h1>Oj, så pinsamt. Det blev ett fel:</h1>
+				<p>{error.message}</p>
+				<button className="button">
+					<Link href="/">Ladda om</Link>
+				</button>
+			</div>
+		)
 	}
 
 	function back() {

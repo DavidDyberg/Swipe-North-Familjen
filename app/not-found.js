@@ -3,7 +3,7 @@ import React from 'react'
 import Link from 'next/link'
 import './styles/globals.css'
 
-export default function NotFound() {
+export default function notFound() {
 	return (
 		<div className="not-found">
 			<h1 className="notFoundHeader">
