@@ -30,7 +30,12 @@
 	background: linear-gradient(to right, #721804b3, #8b351fb2);
 	border: 3px solid #fff;
 	width: 304px;
-	height: 325px;
+	height: 308px;
 	right: 23px;
 	bottom: 62px;
+}
+
+#popup-root {
+	position: absolute; 
+	left: 3%;
 }
