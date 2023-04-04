@@ -188,7 +188,7 @@ function swipeNorthApp() {
 		<div>
 			{
 				data && (
-					<TinderCard onSwipe={onSwipe} key={key}>
+					<TinderCard className="pressable" onSwipe={onSwipe} key={key}>
 						<div>
 							<div className={`shadow ${card.card}`}>
 								<div className={card.headlineContainer}>
