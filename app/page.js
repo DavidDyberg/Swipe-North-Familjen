@@ -14,10 +14,10 @@ export default function Startsida() {
 				<Image
 					className={styles['swipe-north-logga']}
 					src={logga}
-					alt="Swipe north logga"
+					alt="Swipe north-logga"
 				></Image>
 
-				<Link href="/swipe-test">
+				<Link href="/swipe-north">
 					<button className={styles.swipebutton}>
 						HITTA DITT DRÖMJOBB
 					</button>
@@ -25,7 +25,7 @@ export default function Startsida() {
 			</div>
 
 			<div className={styles['button-container']}>
-				<Link href="/login">
+				<Link href="/logga-in">
 					<button className={`${styles.button} ${styles.loggaIn}`}>
 						LOGGA IN
 					</button>

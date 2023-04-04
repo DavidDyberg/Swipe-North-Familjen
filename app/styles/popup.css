@@ -12,11 +12,17 @@
 	background: transparent;
 	border: none;
 	bottom: 32px;
-	position: absolute
+	position: absolute;
 }
 
 .popup-content {
-	background: -webkit-gradient(linear, left top, right top, from(#721804b3), to(#8b351fb2));
+	background: -webkit-gradient(
+		linear,
+		left top,
+		right top,
+		from(#721804b3),
+		to(#8b351fb2)
+	);
 	background: -o-linear-gradient(left, #721804b3, #8b351fb2);
 	background: linear-gradient(to right, #721804b3, #8b351fb2);
 	border: 3px solid #fff;
@@ -25,6 +31,6 @@
 }
 
 #popup-root {
-	position: absolute; 
-    left: auto;
+	position: absolute;
+	left: auto;
 }

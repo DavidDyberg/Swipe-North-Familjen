@@ -32,15 +32,15 @@ body {
 	display: flex;
 	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
-	    -ms-flex-direction: column;
-	        flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
 	margin: 0;
 	min-height: 100vh;
 }
 
 * {
 	-webkit-box-sizing: border-box;
-	        box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 .not-found,
@@ -50,7 +50,13 @@ body {
 }
 
 .button {
-	background: -webkit-gradient(linear, left top, right top, from(#721804b3), to(#8b351fb2));
+	background: -webkit-gradient(
+		linear,
+		left top,
+		right top,
+		from(#721804b3),
+		to(#8b351fb2)
+	);
 	background: -o-linear-gradient(left, #721804b3, #8b351fb2);
 	background: linear-gradient(to right, #721804b3, #8b351fb2);
 	border-radius: 8px;
@@ -81,8 +87,8 @@ body {
 	display: -ms-flexbox;
 	display: flex;
 	-webkit-box-pack: center;
-	    -ms-flex-pack: center;
-	        justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
 }
 
 .text-card {
@@ -96,12 +102,12 @@ body {
 	display: flex;
 	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
-	    -ms-flex-direction: column;
-	        flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
 	height: calc(98vh - 98px);
 	-webkit-box-pack: center;
-	    -ms-flex-pack: center;
-	        justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
 	margin: 0 24px;
 	max-width: var(--card-width);
 	min-height: 70vh;
@@ -113,7 +119,13 @@ body {
 }
 
 .text-card > button {
-	background: -webkit-gradient(linear, left top, right top, from(#721804b3), to(#8b351fb2));
+	background: -webkit-gradient(
+		linear,
+		left top,
+		right top,
+		from(#721804b3),
+		to(#8b351fb2)
+	);
 	background: -o-linear-gradient(left, #721804b3, #8b351fb2);
 	background: linear-gradient(to right, #721804b3, #8b351fb2);
 }
@@ -135,8 +147,8 @@ body {
 div.text-card.saved-jobs {
 	height: unset;
 	-webkit-box-pack: start;
-	    -ms-flex-pack: start;
-	        justify-content: flex-start;
+	-ms-flex-pack: start;
+	justify-content: flex-start;
 	margin: 0 auto 48px auto;
 	padding-bottom: 48px;
 }

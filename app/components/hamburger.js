@@ -39,7 +39,7 @@ export default function Navbar() {
 						</Link>
 					</li>
 					<li className="navItem">
-						<Link href="../saved-jobs">
+						<Link href="../sparade-jobb">
 							<span onClick={closeMenu} className="navLink">
 								Sparade jobb
 							</span>
@@ -53,7 +53,7 @@ export default function Navbar() {
 						</Link>
 					</li>
 					<li className="navItem">
-						<Link href="../login">
+						<Link href="../logga-in">
 							<span onClick={closeMenu} className="navLink">
 								Logga in
 							</span>
