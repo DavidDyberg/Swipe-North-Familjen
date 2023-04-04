@@ -14,6 +14,7 @@ export default function Startsida() {
 				<Image
 					className={styles['swipe-north-logga']}
 					src={logga}
+					alt="Swipe north logga"
 				></Image>
 
 				<Link href="/swipe-test">
