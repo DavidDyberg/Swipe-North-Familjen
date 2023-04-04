@@ -16,9 +16,10 @@ function swipeNorthApp() {
 	const [error, setError] = useState(null)
 	const [number, setNumber] = useState(0)
 	const [jobId, setJobId] = useState('')
-	const [activeJob, setActiveJob] = useState('activeJob')
 	const [key, setKey] = useState(0)
 	const [isDataLoaded, setIsDataLoaded] = useState(false)
+	const [showBriefText, setShowBriefText] = useState(false)
+
 
 	// let savedNotInterestedIds = ''
 	// const [dataArray, setDataArray] = useState('')
@@ -40,28 +41,24 @@ function swipeNorthApp() {
 				setError(error)
 			} finally {
 				setIsLoading(false)
-				// setIsDataLoaded(true)
-
-				// if (isDataLoaded) {
-					// console.log(number)
-					// setNumber(data.hits.length - 1)
-					// console.log(number)
-					// next()
-					// console.log(number)
+				setIsDataLoaded(true)
 			}
 		}
 		fetchData()
 	}, [jobId])
 
-	// useEffect(() => {
-	// 	if (isDataLoaded) {
-	// 	  console.log(number)
-	// 	  setNumber(data.hits.length - 1)
-	// 	  console.log(number)
-	// 	  next()
-	// 	  console.log(number)
-	// 	}
-	//   }, [isDataLoaded, data])
+	useEffect(() => {
+		async function firstLoad() {
+			if (isDataLoaded) {
+			console.log(number)
+			setNumber(data.hits.length - 1)
+			console.log(number)
+			next()
+			console.log(number)
+			}
+		}
+		firstLoad()
+	}, [isDataLoaded, data])
 
 	if (isLoading) {
 		return <h1 className="loading">Vi far norrut ...</h1>
@@ -79,39 +76,105 @@ function swipeNorthApp() {
 		)
 	}
 
+	// function back() {
+	// 	console.log('back körs')
+	// 	const lastNotInterestedIds =
+	// 		JSON.parse(localStorage.getItem('savedNotInterestedIds')) || []
+
+	// 	const lastSavedIds = JSON.parse(localStorage.getItem('savedIds')) || []
+
+	// 	setNumber((prevNumber) =>
+	// 		prevNumber != 0 ? prevNumber - 1 : data.hits.length - 1
+	// 	)
+
+	// 	if (data) {
+	// 		if (
+	// 			lastNotInterestedIds.some(
+	// 				(obj) => obj.notInterestedId === data.hits[number].id
+	// 			) ||
+	// 			lastSavedIds.some((obj) => obj.id) === data.hits[number].id
+	// 		) {
+	// 			setNumber((prevNumber) =>
+	// 				prevNumber != 0 ? prevNumber - 1 : data.hits.length - 1
+	// 			)
+	// 			console.log('-1 extra')
+	// 		}
+	// 	} else {
+	// 		console.log('+0')
+	// 	}
+	// }
+
 	function back() {
-		setNumber((prevNumber) =>
-			prevNumber != 0 ? prevNumber - 1 : data.hits.length - 1
-		)
-	}
+		console.log('back körs')
+		setShowBriefText(false)
+		const lastNotInterestedIds = JSON.parse(localStorage.getItem('savedNotInterestedIds')) || []
+		const lastSavedIds = JSON.parse(localStorage.getItem('savedIds')) || []
+	  
+		let currentIndex = number;
+		let found = false;
+	  
+		while (!found) {
+		  currentIndex = (currentIndex - 1 + data.hits.length) % data.hits.length;
+	  
+		  if (!lastNotInterestedIds.some(obj => obj.notInterestedId === data.hits[currentIndex].id) &&
+			  !lastSavedIds.some(obj => obj.id === data.hits[currentIndex].id)) {
+			found = true;
+		  }
+		}
+	  
+		setNumber(currentIndex);
+	  }
+	  
 
 	function next() {
 		console.log('next körs')
-		const nextNotInterestedIds =
-			JSON.parse(localStorage.getItem('savedNotInterestedIds')) || []
-
-		const NextSavedIds = JSON.parse(localStorage.getItem('savedIds')) || []
-
-		setNumber((prevNumber) =>
-			prevNumber < data.hits.length - 1 ? prevNumber + 1 : 0
-		)
-
-		if (data) {
-			if (
-				nextNotInterestedIds.some(
-					(obj) => obj.notInterestedId === data.hits[number].id
-				) ||
-				NextSavedIds.some((obj) => obj.id) === data.hits[number].id
-			) {
-				setNumber((prevNumber) =>
-					prevNumber < data.hits.length - 1 ? prevNumber + 1 : 0
-				)
-				console.log('+1 extra')
-			}
-		} else {
-			console.log('+0')
+		setShowBriefText(false)
+		const nextNotInterestedIds = JSON.parse(localStorage.getItem('savedNotInterestedIds')) || []
+		const nextSavedIds = JSON.parse(localStorage.getItem('savedIds')) || []
+	  
+		let currentIndex = number;
+		let found = false;
+	  
+		while (!found) {
+		  currentIndex = (currentIndex + 1) % data.hits.length;
+	  
+		  if (!nextNotInterestedIds.some(obj => obj.notInterestedId === data.hits[currentIndex].id) ||
+			  !nextSavedIds.some(obj => obj.id === data.hits[currentIndex].id)) {
+			found = true;
+		  }
 		}
-	}
+	  
+		setNumber(currentIndex);
+	  }
+	  
+
+	// function next() {
+	// 	console.log('next körs')
+	// 	const nextNotInterestedIds =
+	// 		JSON.parse(localStorage.getItem('savedNotInterestedIds')) || []
+
+	// 	const nextSavedIds = JSON.parse(localStorage.getItem('savedIds')) || []
+
+	// 	setNumber((prevNumber) =>
+	// 		prevNumber < data.hits.length - 1 ? prevNumber + 1 : 0
+	// 	)
+
+	// 	if (data) {
+	// 		if (
+	// 			nextNotInterestedIds.some(
+	// 				(obj) => obj.notInterestedId === data.hits[number].id
+	// 			) ||
+	// 			nextSavedIds.some((obj) => obj.id) === data.hits[number].id
+	// 		) {
+	// 			setNumber((prevNumber) =>
+	// 				prevNumber < data.hits.length - 1 ? prevNumber + 1 : 0
+	// 			)
+	// 			console.log('+1 extra')
+	// 		}
+	// 	} else {
+	// 		console.log('+0')
+	// 	}
+	// }
 
 	function swipeNorth() {
 		{
@@ -179,26 +242,31 @@ function swipeNorthApp() {
 
 		if (direction === 'up') {
 			swipeNorth()
-			reloadTinderSwipe()
+			// reloadTinderSwipe()
 			next()
 		} else if (direction === 'down') {
 			swipeDown()
-			reloadTinderSwipe()
+			// reloadTinderSwipe()
 			next()
 		} else if (direction === 'left') {
-			reloadTinderSwipe()
+			// reloadTinderSwipe()
 			next()
 		} else if (direction === 'right') {
-			reloadTinderSwipe()
+			// reloadTinderSwipe()
 			back()
 		}
 		console.log('You swiped: ' + direction)
 		console.log(number)
+		reloadTinderSwipe()
 	}
 
 	function reloadTinderSwipe() {
 		setKey(key + 1)
 		console.log(number)
+	}
+
+	function showMore() {
+		setShowBriefText(true)
 	}
 
 	// function swipeHandler(direction) {
@@ -240,7 +308,7 @@ function swipeNorthApp() {
 						// 		: card.container
 						// }
 						>
-							<div className={`shadow ${card.card} ${activeJob}`}>
+							<div className={`shadow ${card.card}`}>
 								<div className={card.headlineContainer}>
 									<h1 className={card.headline}>
 										{data.hits[number].headline}
@@ -252,18 +320,19 @@ function swipeNorthApp() {
 										{data.hits[number].employer.name}
 									</h2>
 								</div>
+								
+								<div onClick={showMore} className={!showBriefText ? '' : 'displayNone'}>
+									{imgArr[data.hits[number].id.match(/[0-9]/)]}
+								</div>
 
-								{imgArr[data.hits[number].id.match(/[0-9]/)]}
-								{/* <button className={card.lasMer}>
-										Läs mer
-									</button> */}
-
-								<div className={card.briefContainer}>
+								<div className={card.briefContainer + (showBriefText ? "" : " displayNone")}>
 									<div className={card.brief}>
 										{data.hits[number].brief}
 									</div>
 								</div>
 
+
+								<div className={card.emptySpaceForButton}></div>
 								<Link
 									href={data.hits[number].source_links[0].url}
 								>
