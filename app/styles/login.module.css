@@ -77,7 +77,7 @@
 
 .social-media-login-button {
 	padding: 8px;
-	width: 250px;
+	width: 260px;
 	display: flex;
 	align-items: center;
 	margin: 5px;
@@ -92,6 +92,10 @@
 	height: 20px;
 	width: 20px;
 	margin: 5px;
+}
+
+.skapa-konto-form {
+	margin-top: -20px;
 }
 
 @media screen and (max-height: 700px) {

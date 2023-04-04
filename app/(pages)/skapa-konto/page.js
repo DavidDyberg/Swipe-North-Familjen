@@ -10,7 +10,7 @@ export default function SkapaKonto() {
 			<h1>Skapa konto</h1>
 
 			<div className={styles['form-container']}>
-				<form>
+				<form className={styles['skapa-konto-form']}>
 					<input
 						className={styles['login-form']}
 						placeholder="Ditt namn"
