@@ -39,7 +39,7 @@
 	border-radius: 50%;
 	border: 2px solid var(--red-light);
 	height: 200px;
-	margin: 24px;
+	margin: 32px;
 	width: 200px;
 }
 
@@ -51,10 +51,11 @@
 .textContainer h4 {
 	-webkit-text-decoration: 3px underline var(--red-light);
 	text-decoration: 3px underline var(--red-light);
+	margin: 0;
 }
 
 .textContainer p {
-	font-size: 0.7em;
+	font-size: 0.8em;
 }
 
 .mail,
