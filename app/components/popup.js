@@ -9,7 +9,6 @@ import help from '../../public/help.svg'
 
 export default function PopupGfg() {
 	return (
-		<div className="pop">
 			<Popup
 				trigger={
 					<button className="popBtn">
@@ -18,10 +17,9 @@ export default function PopupGfg() {
 				}
 				position="top left"
 			>
-				<div className="popup">
+				<div>
 					<Image className="pil" src={pil} alt="pil" />
 				</div>
 			</Popup>
-		</div>
 	)
 }
