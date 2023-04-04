@@ -52,6 +52,7 @@ function swipeNorthApp() {
 	}
 
 	if (data && number === 0) {
+		console.log(number)
 		setNumber(data.hits.length - 1)
 		console.log(number)
 		next()
@@ -65,6 +66,7 @@ function swipeNorthApp() {
 	}
 
 	function next() {
+		console.log('next körs')
 		const nextNotInterestedIds =
 			JSON.parse(localStorage.getItem('savedNotInterestedIds')) || []
 
