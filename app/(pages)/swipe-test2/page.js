@@ -40,21 +40,28 @@ function swipeNorthApp() {
 				setError(error)
 			} finally {
 				setIsLoading(false)
-				setIsDataLoaded(true)
+				// setIsDataLoaded(true)
+
+				// if (isDataLoaded) {
+					// console.log(number)
+					// setNumber(data.hits.length - 1)
+					// console.log(number)
+					// next()
+					// console.log(number)
 			}
 		}
 		fetchData()
 	}, [jobId])
 
-	useEffect(() => {
-		if (isDataLoaded) {
-		  console.log(number)
-		  setNumber(data.hits.length - 1)
-		  console.log(number)
-		  next()
-		  console.log(number)
-		}
-	  }, [isDataLoaded, data])
+	// useEffect(() => {
+	// 	if (isDataLoaded) {
+	// 	  console.log(number)
+	// 	  setNumber(data.hits.length - 1)
+	// 	  console.log(number)
+	// 	  next()
+	// 	  console.log(number)
+	// 	}
+	//   }, [isDataLoaded, data])
 
 	if (isLoading) {
 		return <h1 className="loading">Vi far norrut ...</h1>
