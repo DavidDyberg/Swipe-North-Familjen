@@ -41,7 +41,6 @@ function swipeNorthApp() {
 			}
 		}
 		fetchData()
-		setNumber(0)
 	}, [jobId])
 
 	if (isLoading) {
@@ -52,13 +51,12 @@ function swipeNorthApp() {
 		return <div>Error: {error.message}</div>
 	}
 
-	// if (data) {
-	// 	console.log(dataArray)
-	// 	console.log(number)
-	// 	console.log(dataArray[0])
-	// 	console.log(dataArray[number])
-	// 	console.log(dataArray[number + 1])
-	// }
+	if (data && number === 0) {
+		setNumber(data.hits.length - 1)
+		console.log(number)
+		next()
+		console.log(number)
+	}
 
 	function back() {
 		setNumber((prevNumber) =>
@@ -67,19 +65,29 @@ function swipeNorthApp() {
 	}
 
 	function next() {
-		const savedNotInterestedIds =
+		const nextNotInterestedIds =
 			JSON.parse(localStorage.getItem('savedNotInterestedIds')) || []
 
+		const NextSavedIds = JSON.parse(localStorage.getItem('savedIds')) || []
+
+		setNumber((prevNumber) =>
+			prevNumber < data.hits.length - 1 ? prevNumber + 1 : 0
+		)
+
 		if (data) {
-			if (savedNotInterestedIds.some(obj => obj.notInterestedId === data.hits[number + 1].id)) {
+			if (
+				nextNotInterestedIds.some(
+					(obj) => obj.notInterestedId === data.hits[number].id
+				) ||
+				NextSavedIds.some((obj) => obj.id) === data.hits[number].id
+			) {
 				setNumber((prevNumber) =>
-					prevNumber < data.hits.length - 1 ? prevNumber + 2 : 0
+					prevNumber < data.hits.length - 1 ? prevNumber + 1 : 0
 				)
+				console.log('+1 extra')
 			}
 		} else {
-			setNumber((prevNumber) =>
-				prevNumber < data.hits.length - 1 ? prevNumber + 1 : 0
-			)
+			console.log('+0')
 		}
 	}
 
@@ -116,7 +124,7 @@ function swipeNorthApp() {
 		if (data) {
 			const notInterestedId = { notInterestedId: data.hits[number].id }
 
-			let savedNotInterestedIds =
+			const savedNotInterestedIds =
 				JSON.parse(localStorage.getItem('savedNotInterestedIds')) || []
 
 			// Check if notInterestedId already exists in savedNotInterestedIds
@@ -149,23 +157,25 @@ function swipeNorthApp() {
 
 		if (direction === 'up') {
 			swipeNorth()
+			reloadTinderSwipe()
 			next()
 		} else if (direction === 'down') {
 			swipeDown()
+			reloadTinderSwipe()
 			next()
 		} else if (direction === 'left') {
+			reloadTinderSwipe()
 			next()
 		} else if (direction === 'right') {
+			reloadTinderSwipe()
 			back()
 		}
 		console.log('You swiped: ' + direction)
 		console.log(number)
-		reloadTinderSwipe()
 	}
-	
+
 	function reloadTinderSwipe() {
 		setKey(key + 1)
-		next()
 		console.log(number)
 	}
 
