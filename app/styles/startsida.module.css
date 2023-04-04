@@ -1,20 +1,31 @@
 .main {
 	background-image: url(../../public/startsida-bild1.jpg);
-	flex-grow: 1;
-	background-size: cover;
 	background-position: center;
+	background-size: cover;
+	-webkit-box-flex: 1;
+	    -ms-flex-positive: 1;
+	        flex-grow: 1;
 }
 
 .logga-container {
-	text-align: center;
-	margin: 20px;
-	margin-bottom: 50px;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
-	align-items: center;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	margin-bottom: 50px;
+	margin: 20px;
+	text-align: center;
 }
 
 .swipebutton {
+	background: -webkit-gradient(linear, left top, right top, from(#721804b3), to(#8b351fb2));
+	background: -o-linear-gradient(left, #721804b3, #8b351fb2);
 	background: linear-gradient(to right, #721804b3, #8b351fb2);
 	border-radius: 25px;
 	border: var(--white) 2px solid;
@@ -22,28 +33,37 @@
 	cursor: pointer;
 	font-size: 16px;
 	font-weight: 700;
-	margin: 8px auto;
-	min-width: 150px;
-	text-transform: uppercase;
-	padding: 12px;
 	margin-bottom: 220px;
 	margin-top: 20px;
+	margin: 8px auto;
+	min-width: 150px;
+	padding: 12px;
+	text-transform: uppercase;
 }
 
 .swipe-north-logga {
-	width: 200px;
 	height: 180px;
+	width: 200px;
 }
 
 .button-container {
-	align-items: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
-	margin: 10px;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
 	margin-top: -10px;
+	margin: 10px;
 }
 
 .button {
+	background: -webkit-gradient(linear, left top, right top, from(#72180447), to(#8b351f5a));
+	background: -o-linear-gradient(left, #72180447, #8b351f5a);
 	background: linear-gradient(to right, #72180447, #8b351f5a);
 	border-radius: 25px;
 	border: var(--white) 2px solid;
@@ -51,9 +71,9 @@
 	cursor: pointer;
 	font-size: 16px;
 	font-weight: 700;
-	width: 250px;
-	text-transform: uppercase;
 	padding: 12px;
+	text-transform: uppercase;
+	width: 250px;
 }
 
 .skapaKonto,
