@@ -27,14 +27,20 @@ main {
 
 body {
 	background: var(--primary-bg);
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
 	margin: 0;
 	min-height: 100vh;
 }
 
 * {
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 }
 
 .not-found,
@@ -44,6 +50,8 @@ body {
 }
 
 .button {
+	background: -webkit-gradient(linear, left top, right top, from(#721804b3), to(#8b351fb2));
+	background: -o-linear-gradient(left, #721804b3, #8b351fb2);
 	background: linear-gradient(to right, #721804b3, #8b351fb2);
 	border-radius: 8px;
 	border-style: none;
@@ -53,8 +61,8 @@ body {
 	font-weight: 700;
 	margin: 24px auto;
 	min-width: 250px;
-	text-transform: uppercase;
 	padding: 12px;
+	text-transform: uppercase;
 }
 
 .button:hover {
@@ -69,8 +77,12 @@ body {
 }
 
 .text-page {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
 }
 
 .text-card {
@@ -79,14 +91,21 @@ body {
 	border-radius: 8px;
 	border-style: solid;
 	border-width: 2px;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
 	height: calc(98vh - 98px);
-	justify-content: center;
-	padding: 0 24px;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
 	margin: 0 24px;
 	max-width: var(--card-width);
 	min-height: 70vh;
+	padding: 0 24px;
 }
 
 .text-card > h1 {
@@ -94,6 +113,8 @@ body {
 }
 
 .text-card > button {
+	background: -webkit-gradient(linear, left top, right top, from(#721804b3), to(#8b351fb2));
+	background: -o-linear-gradient(left, #721804b3, #8b351fb2);
 	background: linear-gradient(to right, #721804b3, #8b351fb2);
 }
 
@@ -113,7 +134,9 @@ body {
 
 div.text-card.saved-jobs {
 	height: unset;
-	justify-content: flex-start;
+	-webkit-box-pack: start;
+	    -ms-flex-pack: start;
+	        justify-content: flex-start;
 	margin: 0 auto 48px auto;
 	padding-bottom: 48px;
 }
@@ -128,10 +151,10 @@ div.text-card.saved-jobs {
 
 .text-card > button.removeAll {
 	background-color: var(--white);
-	border: none;
 	border-style: solid;
 	border-width: 2px;
+	border: none;
 	color: var(--white);
-	margin-top: 0;
 	margin-bottom: 36px;
+	margin-top: 0;
 }
