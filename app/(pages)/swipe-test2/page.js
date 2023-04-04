@@ -71,7 +71,7 @@ function swipeNorthApp() {
 			JSON.parse(localStorage.getItem('savedNotInterestedIds')) || []
 
 		if (data) {
-			if (savedNotInterestedIds.includes(data.hits[number + 1].id)) {
+			if (savedNotInterestedIds.some(obj => obj.notInterestedId === data.hits[number + 1].id)) {
 				setNumber((prevNumber) =>
 					prevNumber < data.hits.length - 1 ? prevNumber + 2 : 0
 				)
@@ -160,12 +160,13 @@ function swipeNorthApp() {
 		}
 		console.log('You swiped: ' + direction)
 		console.log(number)
-		// reloadTinderSwipe()
-		console.log(number)
+		reloadTinderSwipe()
 	}
-
+	
 	function reloadTinderSwipe() {
 		setKey(key + 1)
+		next()
+		console.log(number)
 	}
 
 	// function swipeHandler(direction) {
