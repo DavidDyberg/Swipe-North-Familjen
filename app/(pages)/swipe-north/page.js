@@ -189,7 +189,7 @@ function swipeNorthApp() {
 		reloadTinderSwipe()
 	}
 
-	//Key är bara ett värde som ändras för att skapa en omladdning.
+	//Ett värde som ändras för att skapa en omladdning.
 	function reloadTinderSwipe() {
 		setKey(key + 1)
 	}
