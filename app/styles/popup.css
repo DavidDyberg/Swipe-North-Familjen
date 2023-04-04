@@ -26,8 +26,8 @@
 	background: -o-linear-gradient(left, #721804b3, #8b351fb2);
 	background: linear-gradient(to right, #721804b3, #8b351fb2);
 	border: 3px solid #fff;
-	height: 308px;
-	width: 329px;
+	height: auto;
+	width: auto;
 }
 
 #popup-root {
