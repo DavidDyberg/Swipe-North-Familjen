@@ -103,11 +103,12 @@
 	width: 100%;
 }
 
-.active {
-	display: flex;
-	position: unset;
-}
-
-.lasMer {
-	margin: 12px;
+.imageButton {
+	border: none;
+	background-color: transparent;
+	padding: 0;
+ 	margin: 0;
+  	font: inherit;
+  	cursor: pointer;
+  	outline: inherit;
 }

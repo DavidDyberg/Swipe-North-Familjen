@@ -20,12 +20,6 @@ function swipeNorthApp() {
 	const [isDataLoaded, setIsDataLoaded] = useState(false)
 	const [showBriefText, setShowBriefText] = useState(false)
 
-
-	// let savedNotInterestedIds = ''
-	// const [dataArray, setDataArray] = useState('')
-	// const delay = 2000
-	// let timerId
-
 	useEffect(() => {
 		setIsLoading(true)
 		async function fetchData() {
@@ -34,9 +28,7 @@ function swipeNorthApp() {
 					`https://links.api.jobtechdev.se/joblinks?municipality=kicB_LgH_2Dk&limit=100${jobId}`
 				)
 				const data = await response.json()
-				setData(data)
-				// setDataArray(data.hits)
-				
+				setData(data)	
 			} catch (error) {
 				setError(error)
 			} finally {
@@ -47,14 +39,12 @@ function swipeNorthApp() {
 		fetchData()
 	}, [jobId])
 
+	//Tillagd för att inte visa sparade eller ointessanta annonser som första träff vid omladdning av sidan. 
 	useEffect(() => {
 		async function firstLoad() {
 			if (isDataLoaded) {
-			console.log(number)
 			setNumber(data.hits.length - 1)
-			console.log(number)
 			next()
-			console.log(number)
 			}
 		}
 		firstLoad()
@@ -76,36 +66,7 @@ function swipeNorthApp() {
 		)
 	}
 
-	// function back() {
-	// 	console.log('back körs')
-	// 	const lastNotInterestedIds =
-	// 		JSON.parse(localStorage.getItem('savedNotInterestedIds')) || []
-
-	// 	const lastSavedIds = JSON.parse(localStorage.getItem('savedIds')) || []
-
-	// 	setNumber((prevNumber) =>
-	// 		prevNumber != 0 ? prevNumber - 1 : data.hits.length - 1
-	// 	)
-
-	// 	if (data) {
-	// 		if (
-	// 			lastNotInterestedIds.some(
-	// 				(obj) => obj.notInterestedId === data.hits[number].id
-	// 			) ||
-	// 			lastSavedIds.some((obj) => obj.id) === data.hits[number].id
-	// 		) {
-	// 			setNumber((prevNumber) =>
-	// 				prevNumber != 0 ? prevNumber - 1 : data.hits.length - 1
-	// 			)
-	// 			console.log('-1 extra')
-	// 		}
-	// 	} else {
-	// 		console.log('+0')
-	// 	}
-	// }
-
 	function back() {
-		console.log('back körs')
 		setShowBriefText(false)
 		const lastNotInterestedIds = JSON.parse(localStorage.getItem('savedNotInterestedIds')) || []
 		const lastSavedIds = JSON.parse(localStorage.getItem('savedIds')) || []
@@ -127,7 +88,6 @@ function swipeNorthApp() {
 	  
 
 	function next() {
-		console.log('next körs')
 		setShowBriefText(false)
 		const nextNotInterestedIds = JSON.parse(localStorage.getItem('savedNotInterestedIds')) || []
 		const nextSavedIds = JSON.parse(localStorage.getItem('savedIds')) || []
@@ -147,38 +107,8 @@ function swipeNorthApp() {
 		setNumber(currentIndex);
 	  }
 	  
-
-	// function next() {
-	// 	console.log('next körs')
-	// 	const nextNotInterestedIds =
-	// 		JSON.parse(localStorage.getItem('savedNotInterestedIds')) || []
-
-	// 	const nextSavedIds = JSON.parse(localStorage.getItem('savedIds')) || []
-
-	// 	setNumber((prevNumber) =>
-	// 		prevNumber < data.hits.length - 1 ? prevNumber + 1 : 0
-	// 	)
-
-	// 	if (data) {
-	// 		if (
-	// 			nextNotInterestedIds.some(
-	// 				(obj) => obj.notInterestedId === data.hits[number].id
-	// 			) ||
-	// 			nextSavedIds.some((obj) => obj.id) === data.hits[number].id
-	// 		) {
-	// 			setNumber((prevNumber) =>
-	// 				prevNumber < data.hits.length - 1 ? prevNumber + 1 : 0
-	// 			)
-	// 			console.log('+1 extra')
-	// 		}
-	// 	} else {
-	// 		console.log('+0')
-	// 	}
-	// }
-
 	function swipeNorth() {
 		{
-			// const id = data.hits[number].id
 			const id = {
 				id: data.hits[number].id,
 				headline: data.hits[number].headline,
@@ -195,8 +125,8 @@ function swipeNorthApp() {
 					(setJobId(
 						`&occupation-field=${data.hits[number].occupation_field.concept_id}`
 					),
-					localStorage.setItem('savedIds', JSON.stringify(newIds)),
-					console.log(savedIds))
+					localStorage.setItem('savedIds', JSON.stringify(newIds))
+					)
 			} else {
 				console.log('Dublett!')
 			}
@@ -204,15 +134,12 @@ function swipeNorthApp() {
 	}
 
 	function swipeDown() {
-		// setJobId('')
-
 		if (data) {
 			const notInterestedId = { notInterestedId: data.hits[number].id }
 
 			const savedNotInterestedIds =
 				JSON.parse(localStorage.getItem('savedNotInterestedIds')) || []
 
-			// Check if notInterestedId already exists in savedNotInterestedIds
 			if (
 				!savedNotInterestedIds.some(
 					(id) =>
@@ -227,87 +154,42 @@ function swipeNorthApp() {
 					'savedNotInterestedIds',
 					JSON.stringify(newNotInterestedIds)
 				)
-				console.log(savedNotInterestedIds)
 			} else {
-				console.log(
-					`notInterestedId ${notInterestedId.notInterestedId} already exists in savedNotInterestedIds array.`
-				)
+				console.log('Dublett!')
 			}
 		}
 	}
 
 	const onSwipe = (direction) => {
-		// swipeHandler(direction)
-		console.log(number)
-
 		if (direction === 'up') {
 			swipeNorth()
-			// reloadTinderSwipe()
 			next()
 		} else if (direction === 'down') {
 			swipeDown()
-			// reloadTinderSwipe()
 			next()
 		} else if (direction === 'left') {
-			// reloadTinderSwipe()
 			next()
 		} else if (direction === 'right') {
-			// reloadTinderSwipe()
 			back()
 		}
-		console.log('You swiped: ' + direction)
-		console.log(number)
 		reloadTinderSwipe()
 	}
 
+	//Key är bara ett värde som ändras för att skapa en omladdning.
 	function reloadTinderSwipe() {
 		setKey(key + 1)
-		console.log(number)
 	}
 
 	function showMore() {
 		setShowBriefText(true)
 	}
 
-	// function swipeHandler(direction) {
-	// 	setActiveJob('')
-	// 	if (direction === 'up') {
-	// 		swipeNorth()
-	// 		next()
-	// 	} else if (direction === 'down') {
-	// 		swipeDown()
-	// 		next()
-	// 	} else if (direction === 'left') {
-	// 		next()
-	// 	} else if (direction === 'right') {
-	// 		back()
-	// 	}
-	// 	// setActiveJob('activeJob')
-	// 	console.log('You swiped: ' + direction)
-
-	// 	if (timerId) {
-	// 	clearTimeout(timerId);
-	// 	}
-	// 	timerId = setTimeout(() => {
-	// 		setActiveJob('activeJob')
-	// 		//swipeNorth()
-	// 	timerId = null
-	// 	}, delay)
-	// }
-
 	return (
 		<div>
 			{
 				data && (
-					// dataArray.map((jobAdvert, index) => (
 					<TinderCard onSwipe={onSwipe} key={key}>
-						<div
-						// className={
-						// 	index === number
-						// 		? `${card.container} ${card.active}`
-						// 		: card.container
-						// }
-						>
+						<div>
 							<div className={`shadow ${card.card}`}>
 								<div className={card.headlineContainer}>
 									<h1 className={card.headline}>
@@ -321,16 +203,15 @@ function swipeNorthApp() {
 									</h2>
 								</div>
 								
-								<div onClick={showMore} className={!showBriefText ? '' : 'displayNone'}>
+								<button onClick={showMore} className={`${card.imageButton} ${!showBriefText ? '' : 'displayNone'}`}>
 									{imgArr[data.hits[number].id.match(/[0-9]/)]}
-								</div>
+								</button>
 
 								<div className={card.briefContainer + (showBriefText ? "" : " displayNone")}>
 									<div className={card.brief}>
 										{data.hits[number].brief}
 									</div>
 								</div>
-
 
 								<div className={card.emptySpaceForButton}></div>
 								<Link
@@ -344,7 +225,6 @@ function swipeNorthApp() {
 						</div>
 					</TinderCard>
 				)
-				// ))
 			}
 		</div>
 	)
