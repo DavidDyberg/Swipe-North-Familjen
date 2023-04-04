@@ -26,11 +26,10 @@
 	bottom: 32px;
 }
 
-#popup-2.popup-content {
-	/* background: transparent; */
+.popup-content {
 	background: linear-gradient(to right, #721804b3, #8b351fb2);
 	border: 3px solid #fff;
-	width: 314px;
+	width: 304px;
 	height: 325px;
 	right: 23px;
 	bottom: 62px;
