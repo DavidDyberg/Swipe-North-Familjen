@@ -6,8 +6,8 @@ import facebook from '../../../public/facebook.webp'
 
 export default function SkapaKonto() {
 	return (
-		<div className={styles['login-card']}>
-			<h1>Skapa konto</h1>
+		<div className={`shadow ${styles.textCard}`}>
+			<h1 className={styles.h1}>Skapa konto</h1>
 
 			<div className={styles['form-container']}>
 				<form className={styles['skapa-konto-form']}>
