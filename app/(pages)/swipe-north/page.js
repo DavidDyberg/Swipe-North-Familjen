@@ -218,9 +218,9 @@ function swipeNorthApp() {
 
 							<button
 								onClick={showMore}
-								className={`${card.imageButton} ${
-									!showBriefText ? '' : 'displayNone'
-								}`}
+								className={card.imageButton +
+									(!showBriefText ? '' : ' displayNone')
+								}
 							>
 								{imgArr[data.hits[number].id.match(/[0-9]/)]}
 							</button>

@@ -90,11 +90,11 @@
 
 .skapaKonto,
 .loggaIn {
-	bottom: 12px;
+	bottom: 24px;
 	left: calc(50vw - 125px);
 	position: absolute;
 }
 
 .loggaIn {
-	bottom: 80px;
+	bottom: 92px;
 }
