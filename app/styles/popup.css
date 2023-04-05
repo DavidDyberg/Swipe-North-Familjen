@@ -1,37 +1,36 @@
 .pil {
-	width: 300px;
 	height: 300px;
+	width: 321px;
+}
+
+.help {
+	height: 30px;
+	width: 30px;
 }
 
 .popBtn {
 	background: transparent;
 	border: none;
-}
-
-.help {
-	width: 30px;
-	height: 30px;
-}
-
-.popup {
-	background: transparent;
-	width: 300px;
-	height: 300px;
-}
-
-.pop {
-	display: flex;
-	position: absolute;
-	z-index: 100;
 	bottom: 32px;
+	position: absolute;
 }
 
-#popup-2.popup-content {
-	/* background: transparent; */
+.popup-content {
+	background: -webkit-gradient(
+		linear,
+		left top,
+		right top,
+		from(#721804b3),
+		to(#8b351fb2)
+	);
+	background: -o-linear-gradient(left, #721804b3, #8b351fb2);
 	background: linear-gradient(to right, #721804b3, #8b351fb2);
 	border: 3px solid #fff;
-	width: 314px;
-	height: 325px;
-	right: 23px;
-	bottom: 62px;
+	height: auto;
+	width: auto;
+}
+
+#popup-root {
+	position: absolute;
+	left: auto;
 }

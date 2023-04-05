@@ -4,13 +4,20 @@
 	border-radius: 8px;
 	border-style: solid;
 	border-width: 2px;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
 	flex-direction: column;
 	height: calc(98vh - 98px);
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
 	justify-content: center;
-	padding: 0 24px;
 	max-width: var(--card-width);
 	min-height: 60vh;
+	padding: 0 24px;
 }
 
 .logg {

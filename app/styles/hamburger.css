@@ -1,8 +1,11 @@
 .navbar {
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
+	-ms-flex-pack: distribute;
 	justify-content: space-around;
 }
 
@@ -14,6 +17,9 @@
 
 .Logga {
 	height: 60px;
+	left: calc(50vw - 35px);
+	position: absolute;
+	top: 16px;
 	width: 70px;
 }
 
@@ -35,6 +41,8 @@
 	display: block;
 	height: 5px;
 	margin: 5px auto;
+	-webkit-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
 	width: 40px;
 }
@@ -44,10 +52,19 @@ a {
 }
 
 .navMenu {
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
 	background: var(--primary-bg-menu);
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
 	flex-direction: column;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
 	justify-content: space-between;
 	left: -100%;
 	min-height: 90%;
@@ -55,6 +72,8 @@ a {
 	position: fixed;
 	text-align: center;
 	top: 3.5rem;
+	-webkit-transition: 0.3s;
+	-o-transition: 0.3s;
 	transition: 0.3s;
 	width: 100%;
 	z-index: 120;
@@ -85,9 +104,13 @@ a {
 }
 
 .hamburger.active .bar:nth-child(1) {
+	-webkit-transform: translateY(8px) rotate(45deg);
+	-ms-transform: translateY(8px) rotate(45deg);
 	transform: translateY(8px) rotate(45deg);
 }
 
 .hamburger.active .bar:nth-child(3) {
+	-webkit-transform: translateY(-8px) rotate(-45deg);
+	-ms-transform: translateY(-8px) rotate(-45deg);
 	transform: translateY(-8px) rotate(-45deg);
 }

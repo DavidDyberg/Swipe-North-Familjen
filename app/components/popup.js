@@ -9,19 +9,17 @@ import help from '../../public/help.svg'
 
 export default function PopupGfg() {
 	return (
-		<div className="pop">
-			<Popup
-				trigger={
-					<button className="popBtn">
-						<Image className="help" src={help} alt="help" />
-					</button>
-				}
-				position="top left"
-			>
-				<div className="popup">
-					<Image className="pil" src={pil} alt="pil" />
-				</div>
-			</Popup>
-		</div>
+		<Popup
+			trigger={
+				<button className="popBtn">
+					<Image className="help" src={help} alt="help" />
+				</button>
+			}
+			position="top left"
+		>
+			<div>
+				<Image className="pil" src={pil} alt="pil" />
+			</div>
+		</Popup>
 	)
 }

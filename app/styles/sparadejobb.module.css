@@ -1,16 +1,20 @@
 .h1 {
-	text-align: center;
 	margin-bottom: 30px;
+	text-align: center;
 }
 
 .sparade-jobb-container {
-	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
 }
 
 .sparade-jobb-beskrivning {
-	width: 200px;
 	margin: 10px 0;
+	width: 200px;
 }
 
 .ta-bort-jobb {
@@ -24,17 +28,17 @@
 }
 
 .button-container {
-	text-align: center;
 	margin: 12px;
+	text-align: center;
 }
 
 .button {
+	background-color: #721804bb;
 	border-radius: 8px;
 	border: none;
 	color: white;
-	background-color: #721804bb;
-	width: 180px;
 	height: 30px;
+	width: 180px;
 }
 
 .underline {
